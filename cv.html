@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="CV of Hailey L Johnson — PhD Candidate in Computer Science at UW-Madison."/>
+<title>CV — Hailey L Johnson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400;1,9..144,600&family=Nunito:wght@300;400;500;600&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+<script>if(localStorage.getItem('lang-mode')==='simple')document.documentElement.classList.add('simple-mode');</script>
+<style>
+/* LANGUAGE TOGGLE */
+.lang-simple{display:none;}
+.simple-mode .lang-academic{display:none;}
+.simple-mode .lang-simple{display:inline;}
+.simple-mode div.lang-simple{display:block;}
+.lang-toggle-btn{display:inline-flex;align-items:center;gap:.4rem;background:none;border:1.5px solid var(--moss-mid);border-radius:20px;padding:.28rem .65rem;font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;color:var(--moss);transition:background .18s,color .18s,border-color .18s;white-space:nowrap;flex-shrink:0;}
+.lang-toggle-btn:hover{background:var(--moss-mist);border-color:var(--moss);}
+.lang-toggle-btn[aria-checked="true"]{background:var(--moss);color:var(--white);border-color:var(--moss);}
+.lang-toggle-track{width:24px;height:13px;border-radius:7px;background:currentColor;opacity:.35;position:relative;flex-shrink:0;transition:opacity .18s;}
+.lang-toggle-btn[aria-checked="true"] .lang-toggle-track{opacity:.7;}
+.lang-toggle-thumb{position:absolute;top:2px;left:13px;width:9px;height:9px;border-radius:50%;background:white;transition:left .18s;box-shadow:0 1px 3px rgba(0,0,0,.25);}
+.lang-toggle-btn[aria-checked="true"] .lang-toggle-thumb{left:2px;}
+.lang-toggle-label{transition:opacity .18s;}
+.lang-toggle-detailed{opacity:1;}
+.lang-toggle-simple{opacity:0.45;}
+.lang-toggle-btn[aria-checked="true"] .lang-toggle-detailed{opacity:0.45;}
+.lang-toggle-btn[aria-checked="true"] .lang-toggle-simple{opacity:1;}
+@media(max-width:760px){.lang-toggle-btn{font-size:.58rem;padding:.22rem .5rem;}}
+:root {
+  --moss:#3a5c3e; --moss-mid:#527a58; --moss-light:#7da882; --moss-pale:#cce0ce; --moss-mist:#eef5ee;
+  --cream:#faf7f2; --cream-dark:#f0ebe1; --sand:#e8dfc9;
+  --terra:#9e5028; --terra-pale:#f5e3d8;
+  --amber:#8a5520; --amber-pale:#faecd6;
+  --text:#1e2f20; --text-mid:#405944; --text-soft:#5a7060; --white:#ffffff;
+  --focus:#1a5fa8;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--text);line-height:1.7;min-height:100vh;display:flex;flex-direction:column;}
+
+/* SKIP */
+.skip{position:absolute;top:-100%;left:1rem;z-index:9999;background:var(--moss);color:#fff;padding:.5rem 1rem;border-radius:0 0 4px 4px;font-size:.9rem;text-decoration:none;transition:top .2s;}
+.skip:focus{top:0;}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:3px;}
+
+/* NAV */
+body>nav{position:sticky;top:0;z-index:200;background:rgba(250,247,242,0.93);backdrop-filter:blur(14px);border-bottom:1.5px solid var(--sand);padding:0 2.5rem;height:62px;display:flex;align-items:center;justify-content:space-between;}
+.nav-brand{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:500;color:var(--moss);text-decoration:none;}
+.nav-list{display:flex;gap:.1rem;list-style:none;}
+.nav-list a{font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.07em;text-transform:uppercase;color:var(--text-mid);text-decoration:none;padding:.4rem .75rem;border-radius:4px;transition:background .18s,color .18s;}
+.nav-list a:hover{background:var(--moss-mist);color:var(--moss);}
+.nav-list a.active{background:var(--moss-pale);color:var(--moss);}
+.main-nav-toggle{display:none;background:none;border:1.5px solid var(--moss-pale);border-radius:4px;padding:.4rem .6rem;cursor:pointer;color:var(--moss);font-size:1.1rem;line-height:1;flex-shrink:0;}
+.main-nav-toggle:focus-visible{outline:3px solid var(--focus);outline-offset:2px;}
+
+/* PAGE HEADER */
+.page-head{background:linear-gradient(135deg,var(--moss) 0%,#2d4a32 100%);color:var(--white);padding:3.5rem 2.5rem 3rem;position:relative;overflow:hidden;}
+.page-head::before{content:'';position:absolute;top:-50%;right:-5%;width:500px;height:500px;background:radial-gradient(circle,rgba(255,255,255,.07) 0%,transparent 70%);border-radius:50%;}
+.page-head::after{content:'';position:absolute;bottom:-30%;left:-5%;width:350px;height:350px;background:radial-gradient(circle,rgba(200,230,200,.08) 0%,transparent 70%);border-radius:50%;}
+.page-head-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;}
+.page-head-tag{font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--moss-pale);margin-bottom:.4rem;}
+.page-head-title{font-family:'Fraunces',serif;font-size:clamp(2.2rem,4vw,3.2rem);font-weight:700;line-height:1.1;}
+.page-head-title em{font-style:italic;color:var(--moss-pale);}
+.page-head-sub{margin-top:.5rem;font-size:1rem;color:rgba(255,255,255,.75);font-weight:300;}
+.download-btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--white);color:var(--moss);font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;padding:.7rem 1.4rem;border-radius:8px;text-decoration:none;font-weight:400;transition:all .2s;box-shadow:0 4px 16px rgba(0,0,0,.15);flex-shrink:0;}
+.download-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2);}
+.download-btn svg{width:15px;height:15px;}
+
+/* WAVE */
+.wave{line-height:0;background:linear-gradient(135deg,var(--moss) 0%,#2d4a32 100%);overflow:hidden;}
+.wave-track{display:flex;width:200%;animation:wave-scroll 7s linear infinite;}
+.wave-track svg{width:50%;display:block;flex-shrink:0;}
+@keyframes wave-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* LAYOUT */
+.cv-wrap{max-width:1100px;margin:0 auto;padding:3rem 2.5rem 5rem;flex:1;}
+.cv-layout{display:grid;grid-template-columns:1fr 340px;gap:3.5rem;align-items:start;}
+
+/* SECTION */
+.cv-section{margin-bottom:3rem;}
+.cv-section:last-child{margin-bottom:0;}
+.cv-section-head{display:flex;align-items:center;gap:1rem;margin-bottom:1.4rem;}
+.cv-section-icon{width:75px;height:75px;border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden;}
+.icon-green{background:var(--moss-mist);}
+.icon-amber{background:var(--amber-pale);}
+.icon-terra{background:var(--terra-pale);}
+.cv-section-title{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:500;color:var(--moss);}
+
+/* ENTRY */
+.cv-entry{display:grid;grid-template-columns:1fr auto;gap:.5rem 1rem;padding:1.2rem 0;border-bottom:1px solid var(--cream-dark);align-items:start;}
+.cv-entry:last-child{border-bottom:none;}
+.cv-entry-left{}
+.cv-entry-title{font-weight:600;font-size:.97rem;color:var(--text);line-height:1.35;margin-bottom:.15rem;}
+.cv-entry-org{font-size:.88rem;color:var(--moss-mid);font-weight:500;}
+.cv-entry-loc{font-size:.82rem;color:var(--text-soft);}
+.cv-entry-desc{margin-top:.5rem;font-size:.84rem;color:var(--text-soft);line-height:1.6;}
+.cv-entry-desc ul{list-style:none;display:flex;flex-direction:column;gap:.3rem;margin-top:.3rem;}
+.cv-entry-desc ul li{padding-left:1rem;position:relative;}
+.cv-entry-desc ul li::before{content:'·';position:absolute;left:0;color:var(--moss-light);font-weight:700;}
+.cv-entry-date{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--amber);white-space:nowrap;padding-top:.15rem;text-align:right;}
+
+/* PUBLICATION ENTRY */
+.pub-entry{padding:1.3rem 0;border-bottom:1px solid var(--cream-dark);}
+.pub-entry:last-child{border-bottom:none;}
+.pub-entry-header{display:flex;align-items:flex-start;justify-content:space-between;gap:.75rem;margin-bottom:.3rem;}
+.pub-title{font-family:'Fraunces',serif;font-size:.97rem;font-weight:500;color:var(--moss);line-height:1.4;}
+.pub-title a{color:inherit;text-decoration:none;border-bottom:1.5px solid var(--moss-pale);transition:border-color .18s;}
+.pub-title a:hover{border-color:var(--moss-mid);}
+.pub-year-badge{font-family:'DM Mono',monospace;font-size:.65rem;background:var(--amber-pale);color:var(--amber);padding:.2rem .55rem;border-radius:20px;white-space:nowrap;flex-shrink:0;margin-top:.1rem;}
+.pub-authors{font-size:.82rem;color:var(--text-soft);margin-bottom:.2rem;line-height:1.5;}
+.pub-authors strong{color:var(--text-mid);font-weight:600;}
+.pub-venue{font-size:.82rem;color:var(--moss-mid);font-style:italic;}
+
+/* AWARD ENTRY */
+.award-entry{display:flex;align-items:flex-start;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--cream-dark);}
+.award-entry:last-child{border-bottom:none;}
+.award-dot{width:8px;height:8px;border-radius:50%;background:var(--terra);flex-shrink:0;margin-top:.5rem;}
+.award-name{font-size:.9rem;font-weight:600;color:var(--text);line-height:1.35;}
+.award-sub{font-size:.8rem;color:var(--text-soft);margin-top:.1rem;}
+.award-date{font-family:'DM Mono',monospace;font-size:.65rem;color:var(--amber);margin-left:auto;white-space:nowrap;padding-top:.15rem;flex-shrink:0;}
+
+/* SIDEBAR CARD */
+.sidebar-card{background:var(--white);border:1.5px solid var(--cream-dark);border-radius:14px;padding:1.4rem 1.5rem;margin-bottom:1.25rem;}
+.sidebar-card:last-child{margin-bottom:0;}
+.sidebar-card-title{font-family:'DM Mono',monospace;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--moss-mid);margin-bottom:.9rem;padding-bottom:.5rem;border-bottom:1px solid var(--moss-mist);}
+
+/* SKILLS */
+.skill-group{margin-bottom:1rem;}
+.skill-group:last-child{margin-bottom:0;}
+.skill-group-label{font-size:.75rem;font-weight:600;color:var(--text-mid);margin-bottom:.4rem;}
+.skill-tags{display:flex;flex-wrap:wrap;gap:.35rem;}
+.skill-tag{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.04em;padding:.22rem .6rem;background:var(--moss-mist);color:var(--moss);border:1px solid var(--moss-pale);border-radius:20px;}
+
+/* CONTACT */
+.contact-list{display:flex;flex-direction:column;gap:.6rem;}
+.contact-item{display:flex;align-items:center;gap:.6rem;font-size:.87rem;color:var(--text-mid);}
+.contact-item svg{width:14px;height:14px;color:var(--moss-mid);flex-shrink:0;}
+.contact-item a{color:var(--moss);text-decoration:none;text-underline-offset:3px;}
+.contact-item a:hover{text-decoration:underline;}
+
+/* VOLUNTEER */
+.volunteer-badge{display:inline-flex;align-items:center;gap:.4rem;background:var(--terra-pale);color:var(--terra);font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;padding:.25rem .65rem;border-radius:20px;margin-bottom:.5rem;}
+
+/* REVEAL */
+.fu{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;will-change:transform,opacity;}
+.fu.in{opacity:1;transform:none;will-change:auto;}
+@media(prefers-reduced-motion:reduce){.fu,.fu.in{opacity:1;transform:none;transition:none;will-change:auto;}}
+
+/* FOOTER */
+footer{background:var(--moss);color:var(--moss-pale);padding:2.5rem;}
+.fi{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.2rem;}
+.fn{font-family:'Fraunces',serif;font-size:1.05rem;color:var(--white);}
+.fs{font-family:'DM Mono',monospace;font-size:.62rem;color:var(--moss-pale);margin-top:.15rem;letter-spacing:.06em;}
+.fl{display:flex;gap:1.2rem;flex-wrap:wrap;}
+.fl a{font-family:'DM Mono',monospace;font-size:.66rem;letter-spacing:.07em;text-transform:uppercase;color:var(--white);text-decoration:none;transition:color .18s;}
+.fl a:hover{color:var(--moss-pale);}
+.fc{font-family:'DM Mono',monospace;font-size:.62rem;color:var(--moss-pale);}
+
+/* RESPONSIVE */
+@media(max-width:860px){
+  .cv-layout{grid-template-columns:1fr;}
+  .page-head{padding:2.5rem 1.5rem 2rem;}
+  .cv-wrap{padding:2.5rem 1.5rem 4rem;}
+}
+@media(max-width:760px){
+  body>nav{padding:0;height:auto;flex-wrap:wrap;gap:0;}
+  .nav-brand{display:none;}
+  .main-nav-toggle{display:none;}
+  .nav-list{display:flex;width:100%;height:auto;flex-wrap:wrap;gap:0;overflow:visible;position:static;background:transparent;border:none;box-shadow:none;padding:0;border-bottom:1.5px solid var(--sand);}
+  .nav-list li{display:flex;flex:1 1 auto;}
+  .nav-list li+li::before{display:none;}
+  .nav-list a{flex:1;text-align:center;font-size:.7rem;padding:.55rem .4rem;white-space:nowrap;}
+  .lang-toggle-btn{flex:0 0 100%;width:100%;border-radius:0;border:none;border-top:1.5px solid var(--sand);padding:.45rem 1.25rem;justify-content:center;font-size:.65rem;}
+  .lang-toggle-label{display:inline;}
+}
+@media(max-width:600px){
+  .cv-entry{grid-template-columns:1fr;}
+  .cv-entry-date{text-align:left;}
+}
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip">Skip to main content</a>
+
+<nav aria-label="Main navigation">
+  <a href="index.html" class="nav-brand">Hailey L Johnson</a>
+  <ul class="nav-list" role="list">
+    <li><a href="index.html">About</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="cv.html" class="active" aria-current="page">CV</a></li>
+    <li><a href="participant-information.html">Participate</a></li>
+  </ul>
+  <button id="lang-toggle" class="lang-toggle-btn" role="switch" aria-checked="false" aria-label="Toggle between simple and detailed language">
+    <span class="lang-toggle-label lang-toggle-simple">Simple</span>
+    <span class="lang-toggle-track"><span class="lang-toggle-thumb"></span></span>
+    <span class="lang-toggle-label lang-toggle-detailed">Detailed</span>
+  </button>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-head">
+  <div class="page-head-inner">
+    <div>
+      <p class="page-head-tag">Curriculum Vitae</p>
+      <h1 class="page-head-title">Hailey L Johnson</h1>
+      <p class="page-head-sub">PhD Candidate · Computer Sciences · University of Wisconsin-Madison</p>
+    </div>
+    <div style="display:flex;gap:.75rem;flex-wrap:wrap;">
+      <a href="cv/Johnson_CV_2026.pdf" class="download-btn" download aria-label="Download CV PDF">
+        <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 16l-4-4h3V4h2v8h3l-4 4z"/><path d="M20 18H4v2h16v-2z"/></svg>
+        Download CV
+      </a>
+      <a href="cv/hljohnson_resume.pdf" class="download-btn" download aria-label="Download Resume PDF">
+        <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 16l-4-4h3V4h2v8h3l-4 4z"/><path d="M20 18H4v2h16v-2z"/></svg>
+        Download Resume
+      </a>
+    </div>
+  </div>
+</div>
+<div class="wave" aria-hidden="true">
+  <div class="wave-track">
+    <svg viewBox="0 0 1200 45" preserveAspectRatio="none" style="height:38px;"><path d="M0,22C200,44 400,0 600,22C800,44 1000,0 1200,22L1200,45L0,45Z" fill="#faf7f2"/></svg>
+    <svg viewBox="0 0 1200 45" preserveAspectRatio="none" style="height:38px;"><path d="M0,22C200,44 400,0 600,22C800,44 1000,0 1200,22L1200,45L0,45Z" fill="#faf7f2"/></svg>
+  </div>
+</div>
+
+<main id="main">
+<div class="cv-wrap">
+<div class="cv-layout">
+
+  <!-- ════════════ MAIN COLUMN ════════════ -->
+  <div>
+
+    <!-- EDUCATION -->
+    <section class="cv-section fu" aria-labelledby="edu-heading">
+      <div class="cv-section-head">
+        <div class="cv-section-icon icon-amber" aria-hidden="true"><img loading="lazy" src="images/education.png" alt="" width="75" height="75" style="object-fit:contain;" /></div>
+        <h2 id="edu-heading" class="cv-section-title">Education</h2>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-left">
+          <div class="cv-entry-title">Doctor of Philosophy in Computer Science</div>
+          <div class="cv-entry-org">University of Wisconsin-Madison</div>
+          <div class="cv-entry-loc">Madison, WI · NSF Graduate Research Fellow</div>
+          <div class="cv-entry-desc">Advisor: Dr. Bilge Mutlu</div>
+          <div class="cv-entry-loc">Lab: People and Robots Laboratory</div>
+        </div>
+        <div class="cv-entry-date">Sept 2021 - Present</div>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-left">
+          <div class="cv-entry-title">Bachelor of Science in Computer Engineering</div>
+          <div class="cv-entry-org">University of Idaho</div>
+          <div class="cv-entry-loc">Moscow, ID · Outstanding Senior Award</div>
+        </div>
+        <div class="cv-entry-date">May 2019</div>
+      </div>
+    </section>
+
+    <!-- RESEARCH EXPERIENCE -->
+    <section class="cv-section fu" aria-labelledby="res-heading">
+      <div class="cv-section-head">
+        <div class="cv-section-icon icon-amber" aria-hidden="true"><img loading="lazy" src="images/research.png" alt="" width="75" height="75" style="object-fit:contain;" /></div>
+        <h2 id="res-heading" class="cv-section-title">Research Experience</h2>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-left">
+          <div class="cv-entry-title">Research Assistant</div>
+          <div class="cv-entry-org">People and Robots Laboratory</div>
+          <div class="cv-entry-loc">Advisor: Dr. Bilge Mutlu</div>
+          <div class="cv-entry-desc">
+            <div class="lang-academic"><ul>
+              <li>Integrating interdependence into assistive technology design to increase usability and learnability for adults with Down syndrome.</li>
+              <li>Collaborating on a speech recognition tool for communication sciences researchers, optimizing models for individuals with Down syndrome.</li>
+              <li>Assessed privacy and security notification usability with adults with Down syndrome.</li>
+              <li>Co-designed and developed assistive technology probes, including gamified and AR tablet applications and a tangible interface using Raspberry Pi systems.</li>
+              <li>Completed a systematic scoping literature review on accessible technologies for adults with Down syndrome.</li>
+              <li>Conducted semi-structured interviews with adults with DS, parents/guardians, and experts on technology use in context to lived experiences.</li>
+              <li>Analyzed qualitative and quantitative data on user experiences with conversational agents and social media for individuals with TBI.</li>
+            </ul></div>
+            <div class="lang-simple"><ul>
+              <li>Designing technology tools that are easier for adults with Down syndrome to learn and use, building in support for the people around them.</li>
+              <li>Working with researchers to build a speech recognition tool that works better for people with Down syndrome.</li>
+              <li>Studied how adults with Down syndrome understand and respond to privacy and security warnings on computers.</li>
+              <li>Built and tested prototype tools with adults with Down syndrome, including tablet games, augmented reality apps, and hands-on physical devices.</li>
+              <li>Reviewed published research papers on technology tools designed for adults with Down syndrome.</li>
+              <li>Interviewed adults with Down syndrome, their families, and specialists about how they use technology in their daily lives.</li>
+              <li>Analyzed study data on how people with brain injuries use voice assistants and social media.</li>
+            </ul></div>
+          </div>
+        </div>
+        <div class="cv-entry-date">May 2022 - Present</div>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-left">
+          <div class="cv-entry-title">Graduate Student Researcher</div>
+          <div class="cv-entry-org">Wisconsin Wireless and NetworkinG Systems (WiNGS) Laboratory</div>
+          <div class="cv-entry-loc">Lab PI: Dr. Suman Banerjee</div>
+          <div class="cv-entry-desc"><ul>
+            <li>Constructed nonlinear chirp waveform models for low-power LoRa communication systems to increase the possible number of connected devices in a network.</li>
+            <li>Simulated nonlinear chirp waveform implementations in MATLAB and Python for future real-world testing.</li>
+          </ul></div>
+        </div>
+        <div class="cv-entry-date">Nov 2021 - May 2022</div>
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE -->
+    <section class="cv-section fu" aria-labelledby="work-heading">
+      <div class="cv-section-head">
+        <div class="cv-section-icon icon-amber" aria-hidden="true"><img loading="lazy" src="images/work.png" alt="" width="75" height="75" style="object-fit:contain;" /></div>
+        <h2 id="work-heading" class="cv-section-title">Work Experience</h2>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-left">
+          <div class="cv-entry-title">Computer Engineer II &amp; Lab Manager</div>
+          <div class="cv-entry-org">DCS Corporation</div>
+          <div class="cv-entry-loc">Aberdeen, MD</div>
+          <div class="cv-entry-desc">
+            <div class="lang-academic"><ul>
+              <li>Designed and developed a multiplayer game in QT/C++ for human-agent teaming research studying reaction time under risk and ambiguity.</li>
+              <li>Developed a quantified uncertainty study in Qualtrics and JavaScript to understand how information framing enhances computer-based training.</li>
+              <li>Developed a human teaming virtual environment task in Unreal Engine/C++ to study remote teaming communication under stress.</li>
+              <li>Managed the Innovation Commons lab space operations for Army Research Laboratories (ARL).</li>
+            </ul></div>
+            <div class="lang-simple"><ul>
+              <li>Built a multiplayer game to study how people make quick decisions when working alongside computer systems under pressure.</li>
+              <li>Created an online study to understand how presenting information in different ways affects learning from computers.</li>
+              <li>Built a virtual environment to study how teams communicate when working together remotely under stressful conditions.</li>
+              <li>Managed day-to-day operations of the Army Research Lab's innovation workspace.</li>
+            </ul></div>
+          </div>
+        </div>
+        <div class="cv-entry-date">Aug 2019 - Aug 2021</div>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-left">
+          <div class="cv-entry-title">Firmware Engineering Intern</div>
+          <div class="cv-entry-org">Hewlett-Packard Incorporated</div>
+          <div class="cv-entry-loc">Boise, ID</div>
+          <div class="cv-entry-desc"><ul>
+            <li>Developed and tested memory configuration file generation command line tool for future print devices, increasing engineer productivity.</li>
+            <li>Performed unit, system, and engine testing on various printer firmware drivers.</li>
+          </ul></div>
+        </div>
+        <div class="cv-entry-date">June 2018 - May 2019</div>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-left">
+          <div class="cv-entry-title">Engineering Intern - TechEdSat Project</div>
+          <div class="cv-entry-org">NASA Ames Research Center</div>
+          <div class="cv-entry-loc">Moffett Field, CA</div>
+          <div class="cv-entry-desc"><ul>
+            <li>Practiced CubeSat design, integration, and NASA quality assurance procedures.</li>
+            <li>Participated in two professional presentations and published a scientific poster on the TechEdSat passive Exo-Brake for CubeSat atmosphere reentrance.</li>
+          </ul></div>
+        </div>
+        <div class="cv-entry-date">June - Aug 2017</div>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-left">
+          <div class="cv-entry-title">Project Manager &amp; Technical Lead</div>
+          <div class="cv-entry-org">NASA Undergraduate Student Instrument Project (USIP)</div>
+          <div class="cv-entry-loc">Project PI: Dr. Joseph Law · Moscow, ID</div>
+          <div class="cv-entry-desc"><ul>
+            <li>Managed a multidisciplinary undergraduate team to design, build, test, and fly three payload systems on high-altitude and low-altitude balloon platforms.</li>
+            <li>Developed atmospheric data collection, sensor communication, and data storage software for post-flight analysis.</li>
+            <li>Maintained research schedules meeting NASA design review standards while overseeing a <strong>$200K budget</strong>.</li>
+          </ul></div>
+        </div>
+        <div class="cv-entry-date">Nov 2015 - May 2018</div>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-left">
+          <div class="cv-entry-title">Project Manager - Speech Pathology Application</div>
+          <div class="cv-entry-org">University of Idaho (Sponsored by Micron)</div>
+          <div class="cv-entry-loc">Project PI: Dr. Feng Li · Moscow, ID</div>
+          <div class="cv-entry-desc"><ul>
+            <li>Developed a portable MySQL database with Java API to store child speech audio data for speech therapists and AI research.</li>
+            <li>Scheduled milestones, communicated with clients, and performed technical design review presentations.</li>
+          </ul></div>
+        </div>
+        <div class="cv-entry-date">Aug 2018 - May 2019</div>
+      </div>
+    </section>
+
+    <!-- TEACHING -->
+    <section class="cv-section fu" aria-labelledby="teach-heading">
+      <div class="cv-section-head">
+        <div class="cv-section-icon icon-amber" aria-hidden="true"><img loading="lazy" src="images/teaching.png" alt="" width="75" height="75" style="object-fit:contain;" /></div>
+        <h2 id="teach-heading" class="cv-section-title">Teaching Experience</h2>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-left">
+          <div class="cv-entry-title">Teaching Assistant - CS770: Human Computer Interaction</div>
+          <div class="cv-entry-org">University of Wisconsin-Madison</div>
+          <div class="cv-entry-loc">Madison, WI</div>
+          <div class="cv-entry-desc"></div>
+        </div>
+        <div class="cv-entry-date">September 2026 - Current</div>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-left">
+          <div class="cv-entry-title">Accessibility Lecturer - CS571: Building User Interfaces</div>
+          <div class="cv-entry-org">University of Wisconsin-Madison</div>
+          <div class="cv-entry-loc">Madison, WI · ~300 students</div>
+          <div class="cv-entry-desc">Prepared and delivered two 95-minute lectures on accessibility in UI design.</div>
+        </div>
+        <div class="cv-entry-date">March 2025</div>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-left">
+          <div class="cv-entry-title">Teaching Assistant - CS220: Data Science Programming 1</div>
+          <div class="cv-entry-org">University of Wisconsin-Madison</div>
+          <div class="cv-entry-loc">Madison, WI</div>
+          <div class="cv-entry-desc">Facilitated weekly Python programming labs for ~30 students. Created, edited, and graded labs, assignments, quizzes, and tests. Held weekly office hours.</div>
+        </div>
+        <div class="cv-entry-date">Fall 2022 – Spring 2023</div>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-left">
+          <div class="cv-entry-title">Teaching Assistant - CS640: Introduction to Computer Networking</div>
+          <div class="cv-entry-org">University of Wisconsin-Madison</div>
+          <div class="cv-entry-loc">Madison, WI</div>
+          <div class="cv-entry-desc">Created, edited, and graded assignments, quizzes, and tests. Provided Java debugging support. Held weekly office hours.</div>
+        </div>
+        <div class="cv-entry-date">Fall 2021 – Spring 2022</div>
+      </div>
+    </section>
+
+  </div><!-- /main col -->
+
+  <!-- ════════════ SIDEBAR ════════════ -->
+  <aside aria-label="Quick overview">
+
+    <!-- CONTACT -->
+    <div class="sidebar-card fu">
+      <div class="sidebar-card-title">Contact</div>
+      <ul class="contact-list" role="list">
+        <li class="contact-item">
+          <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+          <a href="mailto:hljohnson22@wisc.edu">hljohnson22@wisc.edu</a>
+        </li>
+        <li class="contact-item">
+          <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          Madison, WI
+        </li>
+        <li class="contact-item">
+          <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          <a href="https://github.com/haileyljohnson" target="_blank" rel="noopener">haileyljohnson</a>
+        </li>
+        <li class="contact-item">
+          <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <a href="https://www.linkedin.com/in/hailey-lynn-johnson/" target="_blank" rel="noopener">hailey-lynn-johnson</a>
+        </li>
+        <li class="contact-item">
+          <svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.91-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <a href="https://twitter.com/@JohnsonHaileyL" target="_blank" rel="noopener">@JohnsonHaileyL</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- AWARDS -->
+    <div class="sidebar-card fu">
+      <div class="sidebar-card-title">Funding &amp; Awards</div>
+      <div class="award-entry">
+        <div class="award-dot" aria-hidden="true"></div>
+        <div><div class="award-name">ACM ASSETS Doctoral Consortium</div><div class="award-sub">Selected participant</div></div>
+        <div class="award-date">Oct 2024</div>
+      </div>
+      <div class="award-entry">
+        <div class="award-dot" aria-hidden="true"></div>
+        <div><div class="award-name">NSF Graduate Research Fellowship</div><div class="award-sub">National Science Foundation</div></div>
+        <div class="award-date">Apr 2023</div>
+      </div>
+      <div class="award-entry">
+        <div class="award-dot" aria-hidden="true"></div>
+        <div><div class="award-name">UW-Madison Fall Competition Grant</div><div class="award-sub">University of Wisconsin-Madison</div></div>
+        <div class="award-date">Dec 2023</div>
+      </div>
+      <div class="award-entry">
+        <div class="award-dot" aria-hidden="true"></div>
+        <div><div class="award-name">Outstanding Senior Award</div><div class="award-sub">UIdaho Dept. of Electrical &amp; Computer Engineering</div></div>
+        <div class="award-date">May 2019</div>
+      </div>
+      <div class="award-entry">
+        <div class="award-dot" aria-hidden="true"></div>
+        <div><div class="award-name">Computer Engineer of the Year</div><div class="award-sub">UIdaho Dept. of Electrical &amp; Computer Engineering</div></div>
+        <div class="award-date">May 2018</div>
+      </div>
+      <div class="award-entry">
+        <div class="award-dot" aria-hidden="true"></div>
+        <div><div class="award-name">NASA USIP Grant — $200,000</div><div class="award-sub">Undergraduate Student Instrument Project</div></div>
+        <div class="award-date">May 2016</div>
+      </div>
+    </div>
+
+    <!-- SKILLS
+    <div class="sidebar-card fu">
+      <div class="sidebar-card-title">Skills &amp; Methods</div>
+      <div class="skill-group">
+        <div class="skill-group-label">Research Methods</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Qualitative Research</span>
+          <span class="skill-tag">Semi-structured Interviews</span>
+          <span class="skill-tag">Co-Design</span>
+          <span class="skill-tag">Technology Probes</span>
+          <span class="skill-tag">Scoping Reviews</span>
+          <span class="skill-tag">Survey Design</span>
+          <span class="skill-tag">IRB Protocol</span>
+          <span class="skill-tag">Thematic Analysis</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Technical</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">C++</span>
+          <span class="skill-tag">Unity / AR</span>
+          <span class="skill-tag">MATLAB</span>
+          <span class="skill-tag">Raspberry Pi</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">Qualtrics</span>
+          <span class="skill-tag">JavaScript</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Focus Areas</div>
+        <div class="skill-tags">
+          <span class="skill-tag">HCI</span>
+          <span class="skill-tag">Accessibility</span>
+          <span class="skill-tag">Assistive Tech</span>
+          <span class="skill-tag">Down Syndrome</span>
+          <span class="skill-tag">IDD</span>
+          <span class="skill-tag">Augmented Reality</span>
+          <span class="skill-tag">Tangible Interfaces</span>
+        </div>
+      </div>
+    </div>  -->
+
+    <!-- VOLUNTEER -->
+    <div class="sidebar-card fu">
+      <div class="sidebar-card-title">Volunteer Experience</div>
+      <div class="cv-entry" style="padding-top:.2rem;">
+        <div class="cv-entry-left">
+          <div class="cv-entry-title">Volunteer</div>
+          <div class="cv-entry-org">Gigi's Playhouse Madison</div>
+          <div class="cv-entry-loc">Madison, WI</div>
+          <div class="cv-entry-desc">Participate in the weekly social group <em>Fantastic Friends</em> for adults with Down syndrome. Plan weekly activities to teach social group members new topics.</div>
+        </div>
+        <div class="cv-entry-date">June 2022 - Sept 2023</div>
+      </div>
+    </div>
+
+  </aside>
+
+</div><!-- /cv-layout -->
+</div><!-- /cv-wrap -->
+</main>
+
+<footer>
+  <div class="fi">
+    <div>
+      <div class="fn">Hailey L Johnson</div>
+      <div class="fs">Ph.D. Candidate · UW-Madison · Computer Sciences</div>
+    </div>
+    <nav class="fl" aria-label="Footer navigation">
+      <a href="index.html">About</a>
+      <a href="publications.html">Publications</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="cv.html">CV</a>
+      <a href="participant-information.html">Participate</a>
+    </nav>
+    <div class="fc">© 2026 Hailey L Johnson</div>
+  </div>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach((e,i) => {
+      if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('in'), i*80); obs.unobserve(e.target); }
+    });
+  }, {threshold:.06});
+  document.querySelectorAll('.fu').forEach(el => obs.observe(el));
+  const mnToggle = document.querySelector('.main-nav-toggle');
+  const mnList = document.querySelector('.nav-list');
+  if (mnToggle && mnList) {
+    mnToggle.addEventListener('click', () => {
+      const open = mnList.classList.toggle('open');
+      mnToggle.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', e => {
+      if (!e.target.closest('nav')) {
+        mnList.classList.remove('open');
+        mnToggle.setAttribute('aria-expanded', false);
+      }
+    });
+  }
+</script>
+<script src="scripts/cursor-tip.js"></script>
+<script src="scripts/lang-toggle.js"></script>
+</body>
+</html>

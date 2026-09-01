@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Money Management Technology Probe Study — prototyping and evaluating budgeting tools with adults with Down syndrome." />
+  <title>Money Management Technology Probe — Hailey L Johnson</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script>if(localStorage.getItem('lang-mode')==='simple')document.documentElement.classList.add('simple-mode');</script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="../index.html" class="nav-home" aria-label="Hailey L Johnson — Home">Hailey L Johnson</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">☰</button>
+    <ul class="nav-links" id="nav-menu" role="list">
+      <li><a href="../index.html">About</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="../portfolio.html">Portfolio</a></li>
+      <li><a href="../cv.html">CV</a></li>
+      <li><a href="../participant-information.html">Participate</a></li>
+    </ul>
+    <button id="lang-toggle" class="lang-toggle-btn" role="switch" aria-checked="false" aria-label="Toggle between simple and detailed language">
+      <span class="lang-toggle-label lang-toggle-simple">Simple</span>
+      <span class="lang-toggle-track"><span class="lang-toggle-thumb"></span></span>
+      <span class="lang-toggle-label lang-toggle-detailed">Detailed</span>
+    </button>
+  </nav>
+
+  <main id="main-content">
+    <div class="page-wrapper">
+
+      <a href="../portfolio.html" class="back-link">← Back to Portfolio</a>
+
+      <header class="page-header reveal">
+        <p class="page-eyebrow">Research Project · Published · CHI 2026</p>
+        <h1 class="page-title">Supporting Money Management among Adults with Down Syndrome: A Multi-Technology Probe Study</h1>
+      </header>
+
+      <!-- PHOTO GALLERY -->
+      <section class="project-gallery reveal" aria-label="Project images">
+        <figure class="gallery-hero">
+          <img loading="lazy" src="../images/TechProbe.png" alt="Technology probe study materials for money management" />
+          <figcaption class="gallery-caption">Technology probe study overview</figcaption>
+        </figure>
+      </section>
+
+      <!-- ABSTRACT -->
+      <section class="project-section reveal" aria-labelledby="abstract-heading">
+        <h2 id="abstract-heading">Abstract</h2>
+        <p><span class="lang-academic">Financial decision-making is critical to adult autonomy, yet many adults with Down syndrome 
+          (AwDS) have limited opportunities or support to develop money management skills, 
+          often receiving allowances while caregivers oversee financial obligations. To better understand 
+          the experiences AwDS have with budgeting and their support preferences, we designed and 
+          prototyped three cash-based budgeting technology probes: a gamified tablet application, 
+          a tablet-based augmented reality application, and a custom tangible device. Seven AwDS used all 
+          three prototypes to complete simplified money management tasks. Across probes, modality tradeoffs 
+          shaped engagement and checking: gamification increased interest but encouraged rushing; 
+          AR reduced arithmetic but encouraged users to trust the system's output and skip verification; 
+          tangible controls supported participation yet introduced coordination challenges. 
+          Error recovery relied on brief, situated prompts linking screen and cash, shaped by prior
+           budgeting and technology experience. These findings point to three design implications: 
+           (1) surface budgeting as a stimulating multi-goal puzzle, not just a sequence of steps; 
+           (2) design error recovery that connects screen state and real money; (3) support interdependent use 
+           without collapsing autonomy.</span><span class="lang-simple">Managing money is important for adult 
+            independence, but many adults with Down syndrome have limited chances to practice. We built three 
+            different budgeting tools and had seven adults with Down syndrome try all three: a tablet game, an app 
+            that uses a phone camera to help with real money, and a hands-on device with physical buttons and controls. 
+            Each tool had tradeoffs: the game was fun but made people rush; the camera app reduced math but led 
+            people to skip checking their work; the physical device was engaging but tricky to coordinate. 
+            Based on what we learned, we suggest three design principles for future money management tools.</span></p>
+      </section>
+
+      <!-- TECHNOLOGY PROBES -->
+      <section class="project-section reveal" aria-labelledby="probes-heading">
+        <h2 id="probes-heading">The Technology Probes</h2>
+        <p><span class="lang-academic">All three probes used the same core cash-based budgeting task: 
+          participants counted a set of bills, set budgeting goals (e.g., rent, food, savings, fun), 
+          and allocated bills to each goal using the corresponding tool. By holding the task structure 
+          constant, we isolated how each modality shaped engagement, errors, and support needs.</span>
+          <span class="lang-simple">All three tools used the same budgeting task: count a set of bills, 
+            set spending goals (like rent, food, and savings), and put the right bills toward each goal. 
+            We kept the task the same across all three tools so we could focus on how each tool changed the 
+            experience.</span></p>
+
+        <h3><span class="lang-academic">Gamified Tablet Application</span>
+          <span class="lang-simple">Tablet Game</span></h3>
+        <p><span class="lang-academic">An iPad application that represented each bill denomination as an 
+          animated alien character ($1 = purple, $5 = blue, $10 = yellow, $20 = orange). Participants selected 
+          an avatar (all designed as characters with Down syndrome), then sorted alien characters into budget 
+          boxes using drag-and-drop gameplay. Text instructions were paired with text-to-speech. The gamified 
+          app was the longest and most text-heavy probe, requiring arithmetic to combine denominations to fill 
+          each budget goal exactly.</span><span class="lang-simple">A tablet app that turned dollar bills into 
+            fun alien characters. Each bill type was a different color alien. Participants picked a personal 
+            avatar, then dragged aliens into budget boxes. The app was the most game-like and had the most steps, 
+            and it required some math to figure out which aliens to put where.</span></p>
+
+        <h3><span class="lang-academic">Augmented Reality Tablet Application</span>
+          <span class="lang-simple">Camera Money App</span></h3>
+        <p><span class="lang-academic">An iPad application using real-time computer vision (Apple CreateML) 
+          to recognize physical dollar bills through the camera. Participants scanned each bill by tapping a 
+          camera button, and the app automatically identified and recorded denomination counts with no arithmetic 
+          required. The AR probe was the shortest and offered a single linear task path, directly connecting 
+          physical cash to a digital display.</span>
+          <span class="lang-simple">A tablet app that used the camera to scan real dollar bills and automatically 
+            figure out what they were worth. Participants held up the tablet and tapped a button to scan each 
+            bill. The app did the math for them. It was the shortest tool and the easiest in terms of counting.</span></p>
+
+        <h3><span class="lang-academic">Custom Tangible Device</span>
+          <span class="lang-simple">Hands-On Physical Device</span></h3>
+        <p><span class="lang-academic">A custom-built two-piece device using Raspberry Pi 4B computers, 
+          two 7-inch touchscreens, six large tactile buttons with LEDs, a rotary volume knob, magnetic 
+          connectors, and a speaker. The top three buttons controlled the level of assistance 
+          (less, medium, more); the bottom three managed audio playback. Unlike the tablet apps, this device 
+          kept controls always physically visible, supported multiple task paths, and allowed participants to 
+          adjust help levels and replay instructions at any time without restarting.</span>
+          <span class="lang-simple">A custom-built two-piece device with real physical buttons, lights, and 
+            two small screens. Six large buttons let participants control how much help they got and manage 
+            audio instructions. Unlike the tablet apps, this device had physical controls that were always 
+            visible and easy to find. Participants could choose their own path through the task and adjust the 
+            help level at any time.</span></p>
+      </section>
+
+      <!-- RESEARCH QUESTIONS -->
+      <section class="project-section reveal" aria-labelledby="rqs-heading">
+        <h2 id="rqs-heading">Research Questions</h2>
+        <ol>
+          <li>
+            <p><span class="lang-academic">How do different technology modalities align with AwDS's prior technology and budgeting experiences in a cash budgeting task?</span><span class="lang-simple"><strong>Does the tool match people's experience?</strong> How well did each tool fit with what participants already knew about technology and money?</span></p>
+          </li>
+          <li>
+            <p><span class="lang-academic"> What forms of support and error correction do AwDS rely on when completing budgeting tasks across modalities?</span><span class="lang-simple"><strong>How do people get unstuck?</strong> When something went wrong or got confusing, what kinds of help did participants rely on to fix it?</span></p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- KEY FINDINGS -->
+      <section class="project-section reveal" aria-labelledby="findings-heading">
+        <h2 id="findings-heading">Design Implications</h2>
+        <p><span class="lang-academic">Across probes, engagement and error patterns reflected participants' 
+          combined prior technology use and budgeting experience. Participants with higher everyday technology 
+          use but limited budgeting experience were most likely to rush and overlook errors; those with stronger 
+          budgeting backgrounds pushed back against automation that felt infantilizing. Within interface 
+          error-recovery features (summaries, bill visualizations, adjustable assistance) rarely 
+          prompted independent checking. Instead error correction emerged primarily through brief, situated 
+          researcher prompts calibrated to each participant's confidence and pace. From these patterns 
+          we derive three design implications:</span><span class="lang-simple">Across all three tools, 
+            how people interacted depended a lot on their past experience with both technology and money. 
+            People who used a lot of technology but had less experience budgeting tended to rush and miss 
+            mistakes. People with more budgeting experience pushed back if the tool felt too simple. 
+            Built-in error-checking features in the tools rarely helped. What actually worked was a person 
+            giving a brief, well-timed hint. From this, we came up with three design suggestions:</span></p>
+        <ol>
+          <li>
+            <p><span class="lang-academic"><strong>Surface budgeting as a stimulating multi-goal 
+              puzzle, not just a sequence of steps.</strong> Participants often advanced through screens 
+              without recognizing how earlier choices constrained later goals. Budgeting tools should make the 
+              budget structure, and cross-goal consequences, visible at moments when choices meaningfully 
+              limit future options, rather than presenting each step in isolation.</span>
+              <span class="lang-simple"><strong>Show the big picture, not just the next step.</strong> Many 
+                participants moved through the tasks one step at a time without seeing how earlier 
+                choices affected later ones. Tools should help people see how all their budget choices 
+                connect to each other.</span></p>
+          </li>
+          <li>
+            <p><span class="lang-academic"><strong>Design error recovery that connects screen state 
+              and real money.</strong> Even when feedback was repeated and visually grounded, participants 
+              struggled to know what corrective action to take. Error recovery should structure corrective 
+              actions directly, creating unavoidable but non-punitive recovery moments that guide users 
+              back into the task without halting progress.</span>
+              <span class="lang-simple"><strong>Make it easy to catch and fix mistakes without feeling bad about 
+                it.</strong> Even when the tools showed error messages, participants often didn't know what to do 
+                next. Tools should guide people through fixing mistakes in a way that feels helpful, not like a 
+                punishment.</span></p>
+          </li>
+          <li>
+            <p><span class="lang-academic"><strong>Support interdependent use without collapsing autonomy.
+
+            </strong> All participants at some point relied on calibrated human support (e.g., reassurance, guiding 
+            questions, or targeted hints) rather than always working alone. Budgeting tools should treat 
+            interdependence as a first-class design concern: supporting user-initiated help requests, shared 
+            budget artifacts, and adjustable guidance that recedes as confidence grows, rather than either removing 
+            support entirely or replacing the user's judgment.</span>
+            <span class="lang-simple"><strong>Make it easy to get help without taking over.</strong> 
+              Everyone in the study needed some help at some point, but they also wanted to stay in 
+              charge of their own decisions. Tools should let people ask for help when they want it and adjust 
+              how much support they get, without the tool making decisions for them.</span></p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- RESOURCES -->
+      <section class="project-section reveal" aria-labelledby="resources-heading">
+        <h2 id="resources-heading">Resources</h2>
+        <div class="project-resources">
+          <a href="https://doi.org/10.1145/3772318.3791299" class="btn btn-primary" rel="noopener" target="_blank"
+             aria-label="Read the paper on ACM DL (opens in new tab)">
+            Read the Paper ↗
+          </a>
+          <a href="https://osf.io/z4j8u/?view_only=4b0c180d16c4430bb120abdc0b05fede" class="btn btn-outline" rel="noopener" target="_blank"
+             aria-label="View study materials on OSF (opens in new tab)">
+            Study Materials (OSF) ↗
+          </a>
+          <a href="../recruit/Co_Design_Flyer.pdf" class="btn btn-outline" rel="noopener" target="_blank"
+             aria-label="View recruitment flyer PDF (opens in new tab)">
+            View Study Flyer (PDF)
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-name">Hailey L Johnson</div>
+        <div class="footer-sub">Ph.D. Candidate · UW-Madison</div>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="../index.html">About</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../portfolio.html">Portfolio</a>
+        <a href="../cv.html">CV</a>
+        <a href="../participant-information.html">Participate</a>
+      </nav>
+      <div class="footer-copy">© 2026 Hailey L Johnson</div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu   = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.site-nav')) {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+      }
+    });
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 70);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => io.observe(el));
+  </script>
+
+<script src="../scripts/cursor-tip.js"></script>
+<script src="../scripts/lang-toggle.js"></script>
+</body>
+</html>

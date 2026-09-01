@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="National Technology Usage Survey Study — investigating technology use patterns and preferences of adults with Down syndrome across the United States." />
+  <title>National Technology Usage Survey — Hailey L Johnson</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script>if(localStorage.getItem('lang-mode')==='simple')document.documentElement.classList.add('simple-mode');</script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="../index.html" class="nav-home" aria-label="Hailey L Johnson — Home">Hailey L Johnson</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">☰</button>
+    <ul class="nav-links" id="nav-menu" role="list">
+      <li><a href="../index.html">About</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="../portfolio.html">Portfolio</a></li>
+      <li><a href="../cv.html">CV</a></li>
+      <li><a href="../participant-information.html">Participate</a></li>
+    </ul>
+    <button id="lang-toggle" class="lang-toggle-btn" role="switch" aria-checked="false" aria-label="Toggle between simple and detailed language">
+      <span class="lang-toggle-label lang-toggle-simple">Simple</span>
+      <span class="lang-toggle-track"><span class="lang-toggle-thumb"></span></span>
+      <span class="lang-toggle-label lang-toggle-detailed">Detailed</span>
+    </button>
+  </nav>
+
+  <main id="main-content">
+    <div class="page-wrapper">
+
+      <a href="../portfolio.html" class="back-link">← Back to Portfolio</a>
+
+      <header class="page-header reveal">
+        <p class="page-eyebrow">Research Project · Complete</p>
+        <h1 class="page-title">National Technology Usage Survey Study with Adults with Down Syndrome</h1>
+      </header>
+
+      <!-- PHOTO GALLERY -->
+      <section class="project-gallery reveal" aria-label="Project images">
+        <figure class="gallery-hero">
+          <img loading="lazy" src="../images/SurveyTeaserFig.png" alt="Survey study teaser figure showing technology usage patterns" />
+          <figcaption class="gallery-caption">Survey study teaser figure</figcaption>
+        </figure>
+      </section>
+
+      <!-- ABSTRACT -->
+      <section class="project-section reveal" aria-labelledby="abstract-heading">
+        <h2 id="abstract-heading">Abstract</h2>
+        <!-- TODO: Replace with full abstract -->
+        <p><span class="lang-academic">Adults with Down syndrome (AwDS) increasingly engage with digital technologies, yet little is known about the specific tools they use and why some are discontinued. To address this gap,
+          we piloted a modular, image-supported survey with 15 AwDS across 11 U.S. states. The survey, which took 60--90 minutes to complete, captured adoption,
+          frequency of use, usability, and discontinuation across 30 technology categories. Our analysis revealed several trends: (1) high adoption of smartphones, messaging apps,
+          and weather apps; (2) low usage of educational and financial tools, as well as virtual reality headsets, augmentative and alternative communication devices, and smartwatches;
+          and (3) discontinuation that was more common for hardware than software, often linked to shifting needs, broken or shared devices, or the need for support. While participants
+          reported interest in using technology for learning, communication, and daily living, fewer expressed interest in work-related tools. This study demonstrates the feasibility of
+          self-reported technology research with AwDS and highlights opportunities for designing familiar and flexible tools to meet evolving needs.</span><span class="lang-simple">Adults with Down syndrome use many kinds of technology, but we knew little about which tools they use most or why they stop using some. We ran an image-supported online survey, designed to be accessible, with 15 adults with Down syndrome across 11 U.S. states, asking about 30 types of technology. Key findings: smartphones, messaging apps, and weather apps were most commonly used; educational and financial tools were used less often; and people most often stopped using a technology because their needs changed, a device broke, or they needed more support. This study shows that adults with Down syndrome can take part in technology research and share their own experiences.</span></p>
+      </section>
+
+      <!-- RESOURCES -->
+      <section class="project-section reveal" aria-labelledby="resources-heading">
+        <h2 id="resources-heading">Resources</h2>
+        <div class="project-resources">
+          <!-- TODO: Add paper link when published
+          <a href="#" class="btn btn-primary" rel="noopener" target="_blank"
+             aria-label="Read the paper (opens in new tab)">
+            Read the Paper ↗
+          </a>
+          -->
+          <!-- TODO: Add protocol/survey instrument link if available
+          <a href="#" class="btn btn-outline" rel="noopener" target="_blank"
+             aria-label="View study protocol (opens in new tab)">
+            View Protocol ↗
+          </a>
+          -->
+          <a href="../recruit/Survey_Flyer.pdf" class="btn btn-outline" rel="noopener" target="_blank"
+             aria-label="View recruitment flyer PDF (opens in new tab)">
+            View Study Flyer (PDF)
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-name">Hailey L Johnson</div>
+        <div class="footer-sub">Ph.D. Candidate · UW-Madison</div>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="../index.html">About</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../portfolio.html">Portfolio</a>
+        <a href="../cv.html">CV</a>
+        <a href="../participant-information.html">Participate</a>
+      </nav>
+      <div class="footer-copy">© 2026 Hailey L Johnson</div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu   = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.site-nav')) {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+      }
+    });
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 70);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => io.observe(el));
+  </script>
+
+<script src="../scripts/cursor-tip.js"></script>
+<script src="../scripts/lang-toggle.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PRISMA Literature Review on Assistive Technologies with Adults with Down Syndrome — published in TACCESS 2025." />
+  <title>PRISMA Literature Review — Hailey L Johnson</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script>if(localStorage.getItem('lang-mode')==='simple')document.documentElement.classList.add('simple-mode');</script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="../index.html" class="nav-home" aria-label="Hailey L Johnson — Home">Hailey L Johnson</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">☰</button>
+    <ul class="nav-links" id="nav-menu" role="list">
+      <li><a href="../index.html">About</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="../portfolio.html">Portfolio</a></li>
+      <li><a href="../cv.html">CV</a></li>
+      <li><a href="../participant-information.html">Participate</a></li>
+    </ul>
+    <button id="lang-toggle" class="lang-toggle-btn" role="switch" aria-checked="false" aria-label="Toggle between simple and detailed language">
+      <span class="lang-toggle-label lang-toggle-simple">Simple</span>
+      <span class="lang-toggle-track"><span class="lang-toggle-thumb"></span></span>
+      <span class="lang-toggle-label lang-toggle-detailed">Detailed</span>
+    </button>
+  </nav>
+
+  <main id="main-content">
+    <div class="page-wrapper">
+
+      <a href="../portfolio.html" class="back-link">← Back to Portfolio</a>
+
+      <header class="page-header reveal">
+        <p class="page-eyebrow">Research Project · Published · TACCESS 2025</p>
+        <h1 class="page-title">PRISMA Literature Review on Assistive Technologies with Adults with Down Syndrome</h1>
+      </header>
+
+      <!-- PHOTO GALLERY -->
+      <section class="project-gallery reveal" aria-label="Project images">
+        <figure class="gallery-hero">
+          <img loading="lazy" src="../images/RQModel.png" alt="Research question model diagram from literature review" />
+          <figcaption class="gallery-caption">Research question model</figcaption>
+        </figure>
+      </section>
+
+      <!-- ABSTRACT -->
+      <section class="project-section reveal" aria-labelledby="abstract-heading">
+        <h2 id="abstract-heading">Abstract</h2>
+        <!-- TODO: Replace with published abstract -->
+        <p><span class="lang-academic">This article presents a scoping review of assistive technologies designed to support Adults with Down Syndrome
+(AwDS), focusing on individuals aged 18 and older. We define assistive technologies as digital tools used
+directly by AwDS to assist them in performing a task or achieving a goal. The review aimed to: (1) examine
+how researchers have involved AwDS in the design and evaluation of technologies; (2) identify the types of
+technologies explored and the motivations driving their use; (3) assess how these technologies support abilities
+across life domains; and (4) analyze the reported benefits, challenges, and design implications. Following
+PRISMA-ScR guidelines, we searched six academic databases (ACM Digital Library, IEEE Xplore, Compendex,
+Scopus, ScienceDirect, and SpringerLink), resulting in 1,944 articles. After applying the inclusion criteria, we
+identified 20 studies for in-depth analysis. Methods ranged from experimental to participatory design, with
+inclusive strategies such as caregiver involvement, visual aids, and personalized supports frequently reported.
+Technologies identified included computers and web platforms, mobile applications, AAC systems, smart
+home tools, and social robots, supporting areas like daily living, communication, learning, navigation, and
+health. Reported benefits included increased independence and digital inclusion, enhanced communication,
+expanded social connection, greater confidence and engagement, and enhanced skill development. Common
+challenges included interface complexity, lack of context-aware interaction, environmental and sensory
+constraints, and uneven impact across users. Based on these findings and paper analysis, we outline five
+design recommendations: reduce interaction complexity, support engagement through feedback and flexible
+pacing, enable personalization and long-term adaptability, provide accessible pathways to secure system
+access, and embed technology within everyday routines. This review emphasizes the importance of inclusive,
+user-centered systems that align with the goals, contexts, and lived experiences of AwDS.</span><span class="lang-simple">We searched six research databases and started with nearly 2,000 articles. After narrowing down, we looked at 20 studies in depth, all about assistive technology built for adults with Down syndrome (age 18 and older). The technologies covered areas like daily living, communication, learning, and health. Benefits included greater independence, better communication, and increased confidence. Common challenges included complicated designs and tools that did not adapt well to each person. Based on our review, we suggest five design ideas: keep interactions simple, give helpful feedback, allow personalization, make it easier to access the system, and build technology into everyday routines.</span></p>
+      </section>
+
+      <!-- RESOURCES -->
+      <section class="project-section reveal" aria-labelledby="resources-heading">
+        <h2 id="resources-heading">Resources</h2>
+        <div class="project-resources">
+          <!-- TODO: Replace # with the TACCESS 2025 DOI or ACM DL link -->
+          <a href="https://dl.acm.org/doi/abs/10.1145/3748333" class="btn btn-primary" rel="noopener" target="_blank"
+             aria-label="Read the TACCESS 2025 paper (opens in new tab)">
+            Read the Paper ↗
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-name">Hailey L Johnson</div>
+        <div class="footer-sub">Ph.D. Candidate · UW-Madison</div>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="../index.html">About</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../portfolio.html">Portfolio</a>
+        <a href="../cv.html">CV</a>
+        <a href="../participant-information.html">Participate</a>
+      </nav>
+      <div class="footer-copy">© 2026 Hailey L Johnson</div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu   = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.site-nav')) {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+      }
+    });
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 70);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => io.observe(el));
+  </script>
+
+<script src="../scripts/cursor-tip.js"></script>
+<script src="../scripts/lang-toggle.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Security and Privacy Notifications with Smartphone AI-Assistants — investigating how AI assistants can support adults with IDD in navigating security and privacy notifications." />
+  <title>S&amp;P Notifications with AI Assistants — Hailey L Johnson</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script>if(localStorage.getItem('lang-mode')==='simple')document.documentElement.classList.add('simple-mode');</script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="../index.html" class="nav-home" aria-label="Hailey L Johnson — Home">Hailey L Johnson</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">☰</button>
+    <ul class="nav-links" id="nav-menu" role="list">
+      <li><a href="../index.html">About</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="../portfolio.html">Portfolio</a></li>
+      <li><a href="../cv.html">CV</a></li>
+      <li><a href="../participant-information.html">Participate</a></li>
+    </ul>
+    <button id="lang-toggle" class="lang-toggle-btn" role="switch" aria-checked="false" aria-label="Toggle between simple and detailed language">
+      <span class="lang-toggle-label lang-toggle-simple">Simple</span>
+      <span class="lang-toggle-track"><span class="lang-toggle-thumb"></span></span>
+      <span class="lang-toggle-label lang-toggle-detailed">Detailed</span>
+    </button>
+  </nav>
+
+  <main id="main-content">
+    <div class="page-wrapper">
+
+      <a href="../portfolio.html" class="back-link">← Back to Portfolio</a>
+
+      <header class="page-header reveal">
+        <p class="page-eyebrow">Research Project · Now Recruiting</p>
+        <h1 class="page-title">Security and Privacy Notifications with Smartphone AI-Assistants Study</h1>
+        <div class="project-detail-meta">
+          <span class="badge badge-active">
+            <span class="status-dot" aria-hidden="true"></span>
+            Now Recruiting
+          </span>
+        </div>
+      </header>
+
+      <!-- PHOTO GALLERY -->
+      <section class="project-gallery reveal" aria-label="Project images">
+        <figure class="gallery-hero">
+          <img loading="lazy" src="../projects/assets/explain_thumb.png" alt="Explain AI support tool overlay showing a plain-language explanation of a security notification" />
+          <figcaption class="gallery-caption">Explain — AI overlay providing plain-language explanation of a security notification</figcaption>
+        </figure>
+      </section>
+
+      <!-- OVERVIEW -->
+      <section class="project-section reveal" aria-labelledby="overview-heading">
+        <h2 id="overview-heading">Overview</h2>
+        <p><span class="lang-academic">This study builds directly on prior work finding that adults with Intellectual and Developmental Disabilities (IDD) can encounter distinct challenges understanding security and privacy notifications, including misreading notification purpose, unfamiliar terminology, and uncertainty about what each available action means. Where that work characterized the problem, this project develops and evaluates an AI-powered smartphone overlay application designed to address it: intercepting notifications in context, classifying them, and providing a plain-language explanation grounded in what the user is most likely to misunderstand.</span>
+          <span class="lang-simple">Our earlier research found that security and privacy warnings on phones and computers can be confusing for some adults with intellectual and developmental disabilities, not just because of technical words, but because it can be hard to know who is involved, what will actually happen, and what the safe choice is. This project builds a smartphone tool to help. When a warning pops up, the tool explains it in plain language, tells you what each button actually does, and helps you decide what to do.</span></p>
+        <p><span class="lang-academic">A key design commitment is that the assistant surfaces information rather than making decisions for the user. It explains what is happening and what each option means, without recommending a specific action. An interdependence feature allows the user to send a screenshot and question to a trusted contact, view that person's response, and make the final choice themselves, preserving the collaborative decision-making model we observed as central to how adults with IDD navigate digital security in practice.</span><span class="lang-simple">The tool is designed so that the user always makes the final choice. It doesn't tell you what to press. If you're not sure what to do, there's an "ask for help" button that lets you send a question to someone you trust. You see their answer, think it over, and decide for yourself. This reflects how people with IDD often make decisions in real life: with trusted support, not alone.</span></p>
+      </section>
+
+      <!-- SYSTEM OVERVIEW -->
+      <section class="project-section reveal" aria-labelledby="system-heading">
+        <h2 id="system-heading">System Overview</h2>
+        <p><span class="lang-academic">The assistant is an Android overlay application. When the user taps the floating button, the app reads the foreground notification's context using the Android Accessibility Service API, capturing visible text, UI element types, available button labels, and whether the notification is system-level or in-app. This structured information, optionally supplemented by a screenshot for apps with sparse accessibility trees, is sent to a large language model (Gemini) which classifies the notification type and returns a structured JSON response. That response is rendered as a bottom-sheet overlay and read aloud via on-device text-to-speech, keeping all speech processing local to the device.</span><span class="lang-simple">We built an Android app that stays on top of whatever you're doing on your phone. When a security or privacy warning appears, you tap a button and the app reads what's on your screen and figures out what kind of warning it is. It then shows you a simple explanation at the bottom of the screen and reads it out loud. Everything works on the phone itself. No audio is sent to a server.</span></p>
+        <p><span class="lang-academic">The response overlay includes: a plain-language explanation (1-2 sentences, approximately grade 5 reading level) addressing the most likely misreading the user brings to the notification; an ordered list of each available action with a description of what actually happens and whether it can be undone; a color-coded risk indicator; and a "Learn More" expansion for additional threat context. The interdependence feature sends a cropped screenshot and a user-typed question to a trusted contact via push notification; the contact's text response is displayed in the app, and the user then dismisses or acts on their own.</span><span class="lang-simple">The explanation screen shows: a short, plain-language explanation of what the warning actually means; a list of the buttons you can press and what each one will do; a color indicator showing how serious it is; and a "Learn More" option if you want to know more. The "ask for help" feature sends a photo of the warning and your question to someone you trust. You see their reply, and then you decide what to do.</span></p>
+      </section>
+
+      <!-- THEORETICAL FRAMEWORKS -->
+      <section class="project-section reveal" aria-labelledby="frameworks-heading">
+        <h2 id="frameworks-heading">Theoretical Frameworks</h2>
+        <p><span class="lang-academic">The assistant's explanation pipeline is grounded in three complementary frameworks applied in sequence. <strong>MoRA (Method of Risk Assessment)</strong> drives the threat assessment component, characterizing each notification along three dimensions: the level of attacker expertise required, whether the threat is opportunistic or targeted at a specific user, and whether harm requires user action or occurs passively. <strong>C-HIP (Communication-Human Information Processing)</strong> provides a comprehension-failure diagnosis: the system explicitly identifies the most likely misreading the user brings to the given notification, based on task context, interface context, and population-specific patterns from prior work, and surfaces that belief gap as the primary content of the plain-language explanation. <strong>TETs (Taxonomy of Electronic Trust Signals)</strong> specifies what each response must include: an indication of cause (why this notification appeared right now), an indication of source (who is specifically involved, not just "third parties"), and a reliability signal (acknowledging uncertainty when the model is not confident in its assessment).</span><span class="lang-simple">We designed the app using three research frameworks that help us figure out what makes security warnings confusing and what information people actually need. The first framework helps the app assess how serious a threat is. The second helps the app identify what people are most likely to misunderstand, and then address that directly. The third makes sure the app always answers three key questions: why is this warning appearing right now, who exactly is involved, and how confident is the app in its explanation.</span></p>
+      </section>
+
+
+      <!-- SIMULATED TEST NOTIFICATIONS -->
+      <section class="project-section reveal" aria-labelledby="notifications-heading">
+        <h2 id="notifications-heading">Simulated Test Notifications</h2>
+        <p><span class="lang-academic">Participants encounter seven simulated security and privacy notifications embedded in a naturalistic task flow. Each notification represents a distinct type commonly found on Android devices.</span><span class="lang-simple">In the study, participants see seven different types of security and privacy warnings, like ones they would actually see on an Android phone.</span></p>
+        <div class="pdf-grid">
+          <a href="../projects/assets/file_sharing.pdf" class="pdf-card" rel="noopener" target="_blank" aria-label="View File Sharing notification PDF">
+            <img loading="lazy" src="../projects/assets/file_sharing_thumb.png" alt="Simulated file sharing notification" />
+            <div class="pdf-card-label">File Sharing</div>
+          </a>
+          <a href="../projects/assets/sync_verification.pdf" class="pdf-card" rel="noopener" target="_blank" aria-label="View Sync Verification notification PDF">
+            <img loading="lazy" src="../projects/assets/sync_verification_thumb.png" alt="Simulated sync verification notification" />
+            <div class="pdf-card-label">Sync Verification</div>
+          </a>
+          <a href="../projects/assets/personalization.pdf" class="pdf-card" rel="noopener" target="_blank" aria-label="View Personalization notification PDF">
+            <img loading="lazy" src="../projects/assets/personalization_thumb.png" alt="Simulated personalization notification" />
+            <div class="pdf-card-label">Personalization</div>
+          </a>
+          <a href="../projects/assets/interaction_graph.pdf" class="pdf-card" rel="noopener" target="_blank" aria-label="View Interaction Graph notification PDF">
+            <img loading="lazy" src="../projects/assets/interaction_graph_thumb.png" alt="Simulated interaction graph notification" />
+            <div class="pdf-card-label">Interaction Graph</div>
+          </a>
+          <a href="../projects/assets/motion_rhythm.pdf" class="pdf-card" rel="noopener" target="_blank" aria-label="View Motion Rhythm notification PDF">
+            <img loading="lazy" src="../projects/assets/motion_rhythm_thumb.png" alt="Simulated motion rhythm notification" />
+            <div class="pdf-card-label">Motion Rhythm</div>
+          </a>
+          <a href="../projects/assets/focus_feed.pdf" class="pdf-card" rel="noopener" target="_blank" aria-label="View Focus Feed notification PDF">
+            <img loading="lazy" src="../projects/assets/focus_feed_thumb.png" alt="Simulated focus feed notification" />
+            <div class="pdf-card-label">Focus Feed</div>
+          </a>
+          <a href="../projects/assets/pin_change.pdf" class="pdf-card" rel="noopener" target="_blank" aria-label="View PIN Change notification PDF">
+            <img loading="lazy" src="../projects/assets/pin_change_thumb.png" alt="Simulated PIN change notification" />
+            <div class="pdf-card-label">PIN Change</div>
+          </a>
+        </div>
+      </section>
+
+      <!-- AI SUPPORT ASSISTANTS -->
+      <section class="project-section reveal" aria-labelledby="assistants-heading">
+        <h2 id="assistants-heading">AI Support Assistants</h2>
+        <p><span class="lang-academic">Five AI-powered support tools were developed and evaluated, each targeting a distinct explanation or action-support function within the overlay interface.</span><span class="lang-simple">We built five different AI tools, each designed to help in a different way when a security or privacy warning appears.</span></p>
+        <div class="pdf-grid">
+          <a href="../projects/assets/explain.pdf" class="pdf-card" rel="noopener" target="_blank" aria-label="View Explain tool PDF">
+            <img loading="lazy" src="../projects/assets/explain_thumb.png" alt="Explain AI support tool" />
+            <div class="pdf-card-label">Explain</div>
+          </a>
+          <a href="../projects/assets/action_outcome.pdf" class="pdf-card" rel="noopener" target="_blank" aria-label="View Action Outcome tool PDF">
+            <img loading="lazy" src="../projects/assets/action_outcome_thumb.png" alt="Action Outcome AI support tool" />
+            <div class="pdf-card-label">Action Outcome</div>
+          </a>
+          <a href="../projects/assets/walkthrough.pdf" class="pdf-card" rel="noopener" target="_blank" aria-label="View Walkthrough tool PDF">
+            <img loading="lazy" src="../projects/assets/walkthrough_thumb.png" alt="Walkthrough AI support tool" />
+            <div class="pdf-card-label">Walkthrough</div>
+          </a>
+          <a href="../projects/assets/redesign.pdf" class="pdf-card" rel="noopener" target="_blank" aria-label="View Redesign tool PDF">
+            <img loading="lazy" src="../projects/assets/redesign_thumb.png" alt="Redesign AI support tool" />
+            <div class="pdf-card-label">Redesign</div>
+          </a>
+          <a href="../projects/assets/interdependence.pdf" class="pdf-card" rel="noopener" target="_blank" aria-label="View Interdependence tool PDF">
+            <img loading="lazy" src="../projects/assets/interdependence_thumb.png" alt="Interdependence AI support tool" />
+            <div class="pdf-card-label">Interdependence</div>
+          </a>
+        </div>
+      </section>
+
+      <!-- STUDY DESIGN -->
+      <section class="project-section reveal" aria-labelledby="study-heading">
+        <h2 id="study-heading">Study Design</h2>
+        <p><span class="lang-academic">The study presents participants with a set of security and privacy notifications spanning several common types, including permission requests, spam alerts, security warnings, account alerts, cookie consent dialogs, and two-factor authentication prompts, encountered naturally within a simulated task flow on a study device. Each notification follows a consistent structure: the participant first describes what they notice and think before engaging the assistant; they are then invited to open the overlay; and afterward they are asked what they understood from the assistant's response. If a participant gets stuck at any point, they may use the in-app "ask for help" feature or indicate they need a break. The researcher does not provide hints or guidance on what action to take.</span><span class="lang-simple">In the study, participants use a phone and encounter several common types of security and privacy warnings while doing everyday tasks, like permission pop-ups, spam warnings, and login alerts. For each one, we first ask what they think before they open our tool. After they use the tool, we ask what they understood. If they get stuck, they can use the "ask for help" button in the app. The researcher doesn't give hints. We want to see how the tool actually helps on its own.</span></p>
+      </section>
+
+      <!-- RESOURCES -->
+      <section class="project-section reveal" aria-labelledby="resources-heading">
+        <h2 id="resources-heading">Resources</h2>
+        <div class="project-resources">
+          <a href="https://forms.gle/ZRh9ArASmKNWUtd7A" class="btn btn-primary">
+            Sign Up to Participate
+          </a>
+          <a href="../recruit/Safety_Flyer.pdf" class="btn btn-outline" rel="noopener" target="_blank"
+             aria-label="Download recruitment flyer PDF (opens in new tab)">
+            Download Flyer (PDF)
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-name">Hailey L Johnson</div>
+        <div class="footer-sub">Ph.D. Candidate · UW-Madison</div>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="../index.html">About</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../portfolio.html">Portfolio</a>
+        <a href="../cv.html">CV</a>
+        <a href="../participant-information.html">Participate</a>
+      </nav>
+      <div class="footer-copy">© 2026 Hailey L Johnson</div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu   = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.site-nav')) {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+      }
+    });
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 70);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => io.observe(el));
+  </script>
+
+<script src="../scripts/cursor-tip.js"></script>
+<script src="../scripts/lang-toggle.js"></script>
+</body>
+</html>

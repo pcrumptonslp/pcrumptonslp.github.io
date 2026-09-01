@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SMART-TBI: Design and evaluation of the Social Media Accessibility and Rehabilitation Toolkit for users with traumatic brain injury — published at ASSETS 2024." />
+  <title>SMART-TBI — Hailey L Johnson</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script>if(localStorage.getItem('lang-mode')==='simple')document.documentElement.classList.add('simple-mode');</script>
+  <style>
+    .gallery-placeholder-block {
+      background: var(--green-mist);
+      border: 1px dashed var(--green-pale);
+      border-radius: var(--radius-md);
+      padding: 3rem 2rem;
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--green-light);
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="../index.html" class="nav-home" aria-label="Hailey L Johnson — Home">Hailey L Johnson</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">☰</button>
+    <ul class="nav-links" id="nav-menu" role="list">
+      <li><a href="../index.html">About</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="../portfolio.html">Portfolio</a></li>
+      <li><a href="../cv.html">CV</a></li>
+      <li><a href="../participant-information.html">Participate</a></li>
+    </ul>
+    <button id="lang-toggle" class="lang-toggle-btn" role="switch" aria-checked="false" aria-label="Toggle between simple and detailed language">
+      <span class="lang-toggle-label lang-toggle-simple">Simple</span>
+      <span class="lang-toggle-track"><span class="lang-toggle-thumb"></span></span>
+      <span class="lang-toggle-label lang-toggle-detailed">Detailed</span>
+    </button>
+  </nav>
+
+  <main id="main-content">
+    <div class="page-wrapper">
+
+      <a href="../portfolio.html" class="back-link">← Back to Portfolio</a>
+
+      <header class="page-header reveal">
+        <p class="page-eyebrow">Research Project · Published · ASSETS 2024</p>
+        <h1 class="page-title">SMART-TBI: Design and Evaluation of the Social Media Accessibility and Rehabilitation Toolkit for Users with Traumatic Brain Injury</h1>
+      </header>
+
+      <!-- PHOTO GALLERY -->
+      <section class="project-gallery reveal" aria-label="Project images">
+        <figure class="gallery-hero">
+          <img loading="lazy" src="../images/smarttbi.png" alt="person looking at a computer with 5 social media aids around the screen to choose" />
+          <figcaption class="gallery-caption">Study teaser figure</figcaption>
+        </figure>
+      </section>
+
+      <!-- ABSTRACT -->
+      <section class="project-section reveal" aria-labelledby="abstract-heading">
+        <h2 id="abstract-heading">Abstract</h2>
+        <!-- TODO: Replace with the published ASSETS 2024 abstract -->
+         <p><span class="lang-academic">Traumatic brain injury (TBI) can cause a range of cognitive and communication challenges that negatively affect social participation
+          in both face-to-face interactions and computer-mediated communication. In particular, individuals with TBI report barriers that
+          limit access to participation on social media platforms. To improve
+          access to and use of social media for users with TBI, we introduce
+          the Social Media Accessibility and Rehabilitation Toolkit (SMARTTBI). The toolkit includes five aids (Writing Aid, Interpretation Aid,
+          Filter Mode, Focus Mode, and Facebook Customization) designed to
+          address the cognitive and communicative needs of individuals with
+          TBI. We asked eight users with moderate-severe TBI and five TBI
+          rehabilitation experts to evaluate each aid. Our findings revealed
+          potential benefits of aids and areas for improvement, including the
+          need for psychological safety, privacy control, and balancing business and accessibility needs; and overall mixed reactions among
+          the participants to AI-based aids.</span><span class="lang-simple">Brain injuries can affect thinking and communication in ways that make social media harder to use. We created SMART-TBI, a toolkit with five tools: a Writing Aid to help compose posts, an Interpretation Aid to explain confusing messages, a Filter Mode to block upsetting content, a Focus Mode to reduce distractions, and a Facebook Customization option. We had eight adults with moderate-to-severe brain injuries and five rehabilitation specialists evaluate each tool. We found where the tools helped most and where they needed improvement, including the importance of privacy control and psychological safety, and we found mixed reactions to AI-based features.</span></p>
+        </section>
+
+      <!-- RESOURCES -->
+      <section class="project-section reveal" aria-labelledby="resources-heading">
+        <h2 id="resources-heading">Resources</h2>
+        <div class="project-resources">
+          <a href="https://dl.acm.org/doi/abs/10.1145/3663548.3675641" class="btn btn-primary" rel="noopener" target="_blank"
+             aria-label="Read the ASSETS 2024 paper (opens in new tab)">
+            Read the Paper ↗
+          </a>
+          <!-- TODO: Add protocol link if available
+          <a href="#" class="btn btn-outline" rel="noopener" target="_blank"
+             aria-label="View study protocol (opens in new tab)">
+            View Protocol ↗
+          </a>
+          -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-name">Hailey L Johnson</div>
+        <div class="footer-sub">Ph.D. Candidate · UW-Madison</div>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="../index.html">About</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../portfolio.html">Portfolio</a>
+        <a href="../cv.html">CV</a>
+        <a href="../participant-information.html">Participate</a>
+      </nav>
+      <div class="footer-copy">© 2026 Hailey L Johnson</div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu   = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.site-nav')) {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+      }
+    });
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 70);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => io.observe(el));
+  </script>
+
+<script src="../scripts/cursor-tip.js"></script>
+<script src="../scripts/lang-toggle.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Conversational Agents for People with Traumatic Brain Injury — published at ASSETS 2023." />
+  <title>Conversational Agents for TBI — Hailey L Johnson</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script>if(localStorage.getItem('lang-mode')==='simple')document.documentElement.classList.add('simple-mode');</script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="../index.html" class="nav-home" aria-label="Hailey L Johnson — Home">Hailey L Johnson</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">☰</button>
+    <ul class="nav-links" id="nav-menu" role="list">
+      <li><a href="../index.html">About</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="../portfolio.html">Portfolio</a></li>
+      <li><a href="../cv.html">CV</a></li>
+      <li><a href="../participant-information.html">Participate</a></li>
+    </ul>
+    <button id="lang-toggle" class="lang-toggle-btn" role="switch" aria-checked="false" aria-label="Toggle between simple and detailed language">
+      <span class="lang-toggle-label lang-toggle-simple">Simple</span>
+      <span class="lang-toggle-track"><span class="lang-toggle-thumb"></span></span>
+      <span class="lang-toggle-label lang-toggle-detailed">Detailed</span>
+    </button>
+  </nav>
+
+  <main id="main-content">
+    <div class="page-wrapper">
+
+      <a href="../portfolio.html" class="back-link">← Back to Portfolio</a>
+
+      <header class="page-header reveal">
+        <p class="page-eyebrow">Research Project · Published · ASSETS 2023</p>
+        <h1 class="page-title">Conversational Agents for People with Traumatic Brain Injury (TBI)</h1>
+      </header>
+
+      <!-- PHOTO GALLERY -->
+      <section class="project-gallery reveal" aria-label="Project images">
+        <figure class="gallery-hero">
+          <img loading="lazy" src="../images/TBI-CA_Teaser.png" alt="Teaser figure from conversational agents study with adults with TBI" />
+          <figcaption class="gallery-caption">Study teaser figure</figcaption>
+        </figure>
+      </section>
+
+      <!-- ABSTRACT -->
+      <section class="project-section reveal" aria-labelledby="abstract-heading">
+        <h2 id="abstract-heading">Abstract</h2>
+        <!-- TODO: Replace with the published ASSETS 2023 abstract -->
+        <p><span class="lang-academic">Traumatic brain injury (TBI) can cause cognitive, communication,
+and psychological challenges that profoundly limit independence in
+everyday life. Conversational Agents (CAs) can provide individuals
+with TBI with cognitive and communication support, although little
+is known about how they make use of CAs to address injury-related
+needs. In this study, we gave nine adults with TBI an at-home CA
+for four weeks to investigate use patterns, challenges, and design
+requirements, focusing particularly on injury-related use. The fndings revealed signifcant gaps between the current capabilities of
+CAs and accessibility challenges faced by TBI users. We also identifed 14 TBI-related activities that participants engaged in with CAs.
+We categorized those activities into four groups: mental health,
+cognitive activities, healthcare and rehabilitation, and routine activities. Design implications focus on accessibility improvements and
+functional designs of CAs that can better support the day-to-day
+needs of people with TBI.</span><span class="lang-simple">Brain injuries can affect memory, communication, and daily independence. Voice assistants, like Siri or Alexa, could help with some of these challenges, but we didn't know much about how people with brain injuries actually use them. We gave nine adults with brain injuries a voice assistant to use at home for four weeks. We found that current voice assistants often don't fully meet the accessibility needs of people with brain injuries. We identified 14 ways participants used the assistant for injury-related needs, grouped into mental health, thinking and memory, health and recovery, and daily routines, and we suggest changes to make voice assistants more accessible.</span></p>
+      </section>
+
+      <!-- RESOURCES -->
+      <section class="project-section reveal" aria-labelledby="resources-heading">
+        <h2 id="resources-heading">Resources</h2>
+        <div class="project-resources">
+          <!-- TODO: Replace # with the ASSETS 2023 ACM DL link or DOI -->
+          <a href="https://dl.acm.org/doi/abs/10.1145/3597638.3608385" class="btn btn-primary" rel="noopener" target="_blank"
+             aria-label="Read the ASSETS 2023 paper (opens in new tab)">
+            Read the Paper ↗
+          </a>
+          <!-- TODO: Add protocol link if available
+          <a href="#" class="btn btn-outline" rel="noopener" target="_blank"
+             aria-label="View study protocol (opens in new tab)">
+            View Protocol ↗
+          </a>
+          -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-name">Hailey L Johnson</div>
+        <div class="footer-sub">Ph.D. Candidate · UW-Madison</div>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="../index.html">About</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../portfolio.html">Portfolio</a>
+        <a href="../cv.html">CV</a>
+        <a href="../participant-information.html">Participate</a>
+      </nav>
+      <div class="footer-copy">© 2026 Hailey L Johnson</div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu   = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.site-nav')) {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+      }
+    });
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 70);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => io.observe(el));
+  </script>
+
+<script src="../scripts/cursor-tip.js"></script>
+<script src="../scripts/lang-toggle.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Supporting Individuals with TBI Through the Use of Digital Aids for Social Media: An In-the-Wild Study." />
+  <title>Digital Aids for Social Media (TBI) — Hailey L Johnson</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script>if(localStorage.getItem('lang-mode')==='simple')document.documentElement.classList.add('simple-mode');</script>
+  <style>
+    .gallery-placeholder-block {
+      background: var(--green-mist);
+      border: 1px dashed var(--green-pale);
+      border-radius: var(--radius-md);
+      padding: 3rem 2rem;
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--green-light);
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="../index.html" class="nav-home" aria-label="Hailey L Johnson — Home">Hailey L Johnson</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">☰</button>
+    <ul class="nav-links" id="nav-menu" role="list">
+      <li><a href="../index.html">About</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="../portfolio.html">Portfolio</a></li>
+      <li><a href="../cv.html">CV</a></li>
+      <li><a href="../participant-information.html">Participate</a></li>
+    </ul>
+    <button id="lang-toggle" class="lang-toggle-btn" role="switch" aria-checked="false" aria-label="Toggle between simple and detailed language">
+      <span class="lang-toggle-label lang-toggle-simple">Simple</span>
+      <span class="lang-toggle-track"><span class="lang-toggle-thumb"></span></span>
+      <span class="lang-toggle-label lang-toggle-detailed">Detailed</span>
+    </button>
+  </nav>
+
+  <main id="main-content">
+    <div class="page-wrapper">
+
+      <a href="../portfolio.html" class="back-link">← Back to Portfolio</a>
+
+      <header class="page-header reveal">
+        <p class="page-eyebrow">Research Project · JMIR Rehabilitation and Assistive Technologies</p>
+        <h1 class="page-title">Supporting Individuals with Traumatic Brain Injury (TBI) Through the Use of Digital Aids for Social Media: An In-the-Wild Study</h1>
+      </header>
+
+      <!-- PHOTO GALLERY -->
+      <section class="project-gallery reveal" aria-label="Project images">
+        <figure class="gallery-hero">
+          <img loading="lazy" src="../images/TBI_digital_aids_eval.png" alt="Study evaluation overview showing participants using Facebook browser aids across a one-month longitudinal study" />
+          <figcaption class="gallery-caption">Study overview: 39 adults with TBI evaluated five Facebook browser aids over approximately one month</figcaption>
+        </figure>
+      </section>
+
+      <!-- ABSTRACT -->
+      <section class="project-section reveal" aria-labelledby="abstract-heading">
+        <h2 id="abstract-heading">Abstract</h2>
+        <p><span class="lang-academic">Digital social media aids are features that enhance accessibility to social media for users with disabilities. Adults with traumatic brain injury (TBI) want to engage in social media but encounter significant barriers due to TBI-related cognitive and communication challenges. We previously collaborated with adults with TBI to develop five aids implemented as Chrome extensions that modified user interface functions and visuals on Facebook. The present study tested the use of the five aids by a novel group of adults with TBI longitudinally and in naturalistic settings. We recruited 39 adult Facebook users with TBI to take part in an approximately one-month within-subject evaluation study. Each aid was used for three days, followed by an evaluation and a two-day no-aid period, in randomized order. Users reported the aids to be beneficial, especially aids that reduced visual clutter and information overload. Users also reported increased life satisfaction after using the aids (P=.02). These results provide proof of concept for the types of digital aids that could improve access to social media for users with TBI. We advocate including aids like these across all social media platforms so users with TBI can access the benefits of social media engagement with fewer barriers.</span><span class="lang-simple">Adults with brain injuries often want to use social media like Facebook, but it can be hard because of memory, focus, or communication challenges related to their injury. We had previously worked with adults with TBI to build five browser tools that change how Facebook looks and works to make it easier to use. In this study, 39 adults with TBI tried all five tools over about a month, using each one for three days before answering questions about it. People said the tools were helpful, especially ones that cut down on clutter and too much information. They also reported feeling better about their lives after using the tools. Our results show that these kinds of tools can make a real difference, and we think all social media platforms should offer features like these.</span></p>
+
+        <figure class="gallery-hero reveal" style="margin-top: 1.5rem;">
+          <img loading="lazy" src="../images/TBI_digital_aids.png" alt="The five Facebook browser aids: Writing Aid, Interpretation Aid, Filter Mode, Focus Mode, and Facebook Customization" />
+          <figcaption class="gallery-caption">The five digital aids developed for Facebook accessibility</figcaption>
+        </figure>
+      </section>
+
+      <!-- RESOURCES -->
+      <section class="project-section reveal" aria-labelledby="resources-heading">
+        <h2 id="resources-heading">Resources</h2>
+        <div class="project-resources">
+          <a href="https://doi.org/10.2196/83639" class="btn btn-primary" rel="noopener" target="_blank"
+             aria-label="Read the paper (opens in new tab)">
+            Read the Paper ↗
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-name">Hailey L Johnson</div>
+        <div class="footer-sub">Ph.D. Candidate · UW-Madison</div>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="../index.html">About</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../portfolio.html">Portfolio</a>
+        <a href="../cv.html">CV</a>
+        <a href="../participant-information.html">Participate</a>
+      </nav>
+      <div class="footer-copy">© 2026 Hailey L Johnson</div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu   = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.site-nav')) {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+      }
+    });
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 70);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => io.observe(el));
+  </script>
+
+<script src="../scripts/cursor-tip.js"></script>
+<script src="../scripts/lang-toggle.js"></script>
+</body>
+</html>
