@@ -1,29 +1,34 @@
 /* ═══════════════════════════════════════════
-   HAILEY L JOHNSON — Academic Website
-   Design: Warm organic minimalism
-   Palette: Earthy greens + warm sand + amber
+   PHOEBE CRUMPTON — Academic Website
+   Design: Warm minimalism
+   Palette: Soft neutrals + muted mauve
    ═══════════════════════════════════════════ */
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400;1,9..144,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@300;400&display=swap');
 
 /* ── TOKENS ── */
 :root {
-  --green-deep:   #2a4030;
-  --green-rich:   #3d6147;
-  --green-mid:    #5a8a62;
-  --green-light:  #8ab890;
-  --green-pale:   #c4d9c6;
-  --green-mist:   #edf4ee;
-  --sand:         #f6f1e9;
-  --sand-dark:    #ede7db;
-  --amber:        #8a5520;
-  --amber-light:  #d4a06a;
-  --amber-pale:   #f2e4ce;
-  --text-dark:    #1c2e20;
-  --text-mid:     #3a5540;
-  --text-light:   #4d6e53;
-  --white:        #fefffe;
-  --focus-ring:   #2a6db5;
+:root {
+  --green-deep:   #4b5563;
+  --green-rich:   #6b7280;
+  --green-mid:    #9ca3af;
+  --green-light:  #d1d5db;
+  --green-pale:   #e7dfd7;
+  --green-mist:   #f3f4f6;
+
+  --sand:         #fcfbf9;
+  --sand-dark:    #f5f1ec;
+
+  --amber:        #7f5a6a;
+  --amber-light:  #b48a5a;
+  --amber-pale:   #eee3e8;
+
+  --text-dark:    #2f3437;
+  --text-mid:     #4b5563;
+  --text-light:   #6b7280;
+
+  --white:        #ffffff;
+  --focus-ring:   #5b6b8c;
 
   --font-display: 'Lora', Georgia, serif;
   --font-body:    'DM Sans', system-ui, sans-serif;
@@ -369,8 +374,8 @@ h2.section-title {
 
 /* ── FOOTER ── */
 .site-footer {
-  background: #3a5c3e;
-  color: var(--green-pale);
+background: #4b5563;
+color: var(--green-pale);
   padding: 2.5rem;
   margin-top: auto;
 }
