@@ -439,6 +439,29 @@ footer{background:var(--moss);color:var(--moss-pale);padding:2.5rem;}
   <div class="brain-bubble">Hey! 👋</div>
   <img src="images/brainwebsite.png" alt="Friendly brain mascot waving">
 </div>
+
+  <script>
+  window.addEventListener('load', () => {
+    const brain = document.getElementById('brain-greeting');
+    const closeButton = brain.querySelector('.brain-close');
+
+    // Brain pops up after 0.7 seconds
+    setTimeout(() => {
+      brain.classList.add('show');
+    }, 700);
+
+    // Brain disappears after 5 seconds
+    const hideBrain = setTimeout(() => {
+      brain.classList.remove('show');
+    }, 5000);
+
+    // Let visitors close it early
+    closeButton.addEventListener('click', () => {
+      clearTimeout(hideBrain);
+      brain.classList.remove('show');
+    });
+  });
+</script>
 <body>
 
 <a href="#main" class="skip">Skip to main content</a>
