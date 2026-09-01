@@ -362,6 +362,76 @@ footer{background:var(--moss);color:var(--moss-pale);padding:2.5rem;}
   .lang-toggle-label{display:inline;}
   .bklist { grid-template-columns: 1fr; }
 }
+  /* Brain welcome popup */
+.brain-greeting {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  width: min(260px, 70vw);
+  z-index: 9999;
+
+  opacity: 0;
+  transform: translateY(30px) scale(0.92);
+  pointer-events: none;
+
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+.brain-greeting.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.brain-greeting img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.brain-bubble {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background: var(--white);
+  color: var(--terra);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.55rem 0.8rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(47, 52, 55, 0.15);
+}
+
+.brain-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.92);
+  color: var(--text);
+  font-size: 1.15rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+@media (max-width: 600px) {
+  .brain-greeting {
+    width: 190px;
+    right: 0.75rem;
+    bottom: 0.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brain-greeting {
+    transition: none;
+  }
+}
 </style>
 </head>
   <div id="brain-greeting" class="brain-greeting" aria-live="polite">
