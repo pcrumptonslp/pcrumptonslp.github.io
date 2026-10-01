@@ -124,15 +124,48 @@ body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--text);l
 .press-source{font-family:'DM Mono',monospace;font-size:.62rem;color:var(--text-soft);letter-spacing:.04em;margin-top:.15rem;}
 .press-arrow{font-size:1rem;color:var(--moss-light);flex-shrink:0;margin-left:auto;padding-left:.5rem;}
 
-/* RESEARCH CARDS */
-.r-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;}
-.r-card{background:var(--white);border-radius:12px;padding:1.6rem;border:1.5px solid var(--moss-pale);transition:transform .22s,box-shadow .22s;position:relative;overflow:hidden;}
-.r-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--moss-light),var(--amber));transform:scaleX(0);transform-origin:left;transition:transform .3s;}
-.r-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(58,92,62,.12);}
-.r-card:hover::after{transform:scaleX(1);}
-.r-num{font-family:'Fraunces',serif;font-size:2.2rem;font-style:italic;color:var(--moss-pale);line-height:1;margin-bottom:.6rem;}
-.r-title{font-family:'Fraunces',serif;font-size:1rem;font-weight:500;color:var(--moss);margin-bottom:.6rem;line-height:1.35;}
-.r-desc{font-size:.88rem;color:var(--text-soft);line-height:1.65;}
+/* RESEARCH INTERESTS */
+.r-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4rem;
+  row-gap: 0;
+}
+
+.r-card {
+  padding: 1.6rem 0 1.8rem;
+  border-bottom: 1px solid var(--moss-pale);
+}
+
+.r-card:hover {
+  transform: none;
+}
+
+.r-num {
+  display: none;
+}
+
+.r-title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--moss);
+  margin-bottom: .45rem;
+  line-height: 1.4;
+}
+
+.r-desc {
+  font-size: .92rem;
+  color: var(--text-soft);
+  line-height: 1.7;
+  max-width: 48ch;
+}
+
+@media (max-width: 700px) {
+  .r-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* TEAM */
 .team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:.9rem;}
