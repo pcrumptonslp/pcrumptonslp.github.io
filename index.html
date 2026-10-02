@@ -632,6 +632,77 @@ footer{background:var(--moss);color:var(--moss-pale);padding:2.5rem;}
     height: 260px;
   }
 }
+/* PROFESSIONAL & COMMUNITY SERVICE */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--moss-pale);
+}
+
+.service-item {
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  border-right: 1px solid var(--moss-pale);
+}
+
+.service-item:last-child {
+  border-right: none;
+}
+
+.service-logo {
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.service-logo img {
+  display: block;
+  max-width: 150px;
+  max-height: 75px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.service-item h4 {
+  margin: 0 0 .3rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.service-item p {
+  margin: 0;
+  font-size: .78rem;
+  line-height: 1.5;
+  color: var(--text-mid);
+}
+
+.service-item span {
+  display: block;
+  margin-top: .25rem;
+  font-size: .72rem;
+  line-height: 1.45;
+  color: var(--text-soft);
+}
+
+@media (max-width: 700px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-item {
+    border-right: none;
+    border-bottom: 1px solid var(--moss-pale);
+  }
+
+  .service-item:last-child {
+    border-bottom: none;
+  }
+}
 </style>
 </head>
   <div id="brain-greeting" class="brain-greeting" aria-live="polite">
@@ -816,18 +887,47 @@ footer{background:var(--moss);color:var(--moss-pale);padding:2.5rem;}
 
 </article>
 
-    <!-- VOLUNTEERING -->
-    <article class="hobby-card fu">
-      <div class="hobby-header">
-       <h3 class="hobby-title">Professional &amp; Community Service</h3>
-      </div>
+<!-- PROFESSIONAL & COMMUNITY SERVICE -->
+<article class="hobby-card fu">
 
-      <div class="hobby-body">
-        <p class="hobby-desc">
-          Coming soon.
-        </p>
+  <div class="hobby-header">
+    <h3 class="hobby-title">Professional &amp; Community Service</h3>
+  </div>
+
+  <div class="service-grid">
+
+    <div class="service-item">
+      <div class="service-logo">
+        <img src="images/alz-stacked-purple.svg"
+             alt="Alzheimer's Association">
       </div>
-    </article>
+      <h4>Alzheimer's Association</h4>
+      <p>Wisconsin Chapter</p>
+      <span>Community Educator &amp; Community Representative</span>
+    </div>
+
+  <div class="service-item">
+  <div class="service-logo">
+    <img src="images/litmn_logo-original.svg"
+         alt="Literacy Minnesota">
+  </div>
+  <h4>Literacy Minnesota</h4>
+  <p>ESL Teacher</p>
+</div>
+
+   <div class="service-item">
+  <div class="service-logo">
+    <img src="images/nsshla.png"
+         alt="National NSSLHA">
+  </div>
+  <h4>National NSSLHA</h4>
+  <p>Elected Board Member</p>
+  <span>IDEA Group</span>
+</div>
+
+  </div>
+
+</article>
 
 
     <!-- TEACHING -->
