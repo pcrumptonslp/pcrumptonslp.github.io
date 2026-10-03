@@ -711,6 +711,32 @@ footer{background:var(--moss);color:var(--moss-pale);padding:2.5rem;}
     border-bottom: none;
   }
 }
+  .service-item:last-child {
+    border-bottom: none;
+  }
+}
+
+
+/* =====================================================
+   NEW PHOEBE HERO
+   ===================================================== */
+
+.hero-new {
+  position: relative;
+  background: var(--cream);
+  overflow: hidden;
+  padding: 0 0 5rem;
+}
+
+/* ...the rest of the NEW PHOEBE HERO code... */
+
+@media (prefers-reduced-motion: reduce) {
+  .speech-wave-line {
+    animation: none;
+  }
+}
+
+</style>
 </style>
 </head>
   <div id="brain-greeting" class="brain-greeting" aria-live="polite">
@@ -763,20 +789,94 @@ footer{background:var(--moss);color:var(--moss-pale);padding:2.5rem;}
 <main id="main">
 
 <!-- HERO -->
-<div class="hero">
-  <div class="hero-text">
-    <div class="hero-eyebrow fu">· PhD Student · UW-Madison ·</div>
-    <h1 class="hero-name fu">Phoebe Crumpton</h1>
-    <p class="hero-pro fu">M.S., CCC-SLP</p>
+<section class="hero-new">
 
-    <p class="hero-bio fu">
-      Website under construction.
-    </p>
+  <!-- ANIMATED SPEECH WAVE -->
+  <div class="speech-wave" aria-hidden="true">
+    <svg viewBox="0 0 1600 120" preserveAspectRatio="none">
+      <path class="speech-wave-line"
+        d="M0,72
+           C55,72 75,72 100,72
+           C120,72 126,28 148,28
+           C170,28 176,94 200,94
+           C224,94 232,50 254,50
+           C282,50 286,72 330,72
+           C390,72 420,48 470,48
+           C520,48 550,78 600,78
+           C650,78 670,38 710,38
+           C750,38 765,72 815,72
+           C865,72 890,56 930,56
+           C980,56 1000,76 1050,76
+           C1100,76 1125,60 1170,60
+           C1210,60 1220,96 1245,96
+           C1270,96 1278,48 1300,48
+           C1325,48 1330,98 1355,98
+           C1380,98 1388,25 1412,25
+           C1438,25 1445,75 1480,75
+           C1520,75 1550,72 1600,72"/>
+    </svg>
+
+    <div class="wave-label wave-label-one">
+      Speech-Language Pathologist
+    </div>
+
+    <div class="wave-label wave-label-two">
+      PhD Student
+    </div>
+
+    <div class="wave-label wave-label-three">
+      Researcher
+    </div>
   </div>
-</div>
 
-  <div class="wave" aria-hidden="true"><div class="wave-track"><svg viewBox="0 0 1200 55" preserveAspectRatio="none" style="height:45px;"><path d="M0,28C200,56 400,0 600,28C800,56 1000,0 1200,28L1200,55L0,55Z" fill="#f0ebe1"/></svg><svg viewBox="0 0 1200 55" preserveAspectRatio="none" style="height:45px;"><path d="M0,28C200,56 400,0 600,28C800,56 1000,0 1200,28L1200,55L0,55Z" fill="#f0ebe1"/></svg></div></div>
 
+  <!-- HERO CONTENT -->
+  <div class="hero-new-inner">
+
+    <!-- PHOTO -->
+    <div class="hero-portrait-wrap">
+      <div class="hero-portrait-placeholder">
+        <span>Photo coming soon</span>
+      </div>
+
+      <span class="hero-sparkle sparkle-one">✦</span>
+      <span class="hero-sparkle sparkle-two">✦</span>
+    </div>
+
+
+    <!-- INTRO -->
+    <div class="hero-new-text">
+
+      <div class="hero-pill">
+        PhD Student · UW–Madison
+      </div>
+
+      <h1 class="hero-new-name">
+        Phoebe<br>Crumpton
+      </h1>
+
+      <p class="hero-new-credentials">
+        M.S., CCC-SLP
+      </p>
+
+      <p class="hero-new-bio">
+        I am a speech-language pathologist and PhD student at the
+        University of Wisconsin–Madison. I am interested in communication and
+        cognition changes across aging and in neurodegenerative disease.
+      </p>
+
+      <div class="hero-topics">
+        <span>Connected Speech</span>
+        <span>Cognitive Aging</span>
+        <span>Sex Differences</span>
+        <span>Cognitive Resilience</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 <!-- RESEARCH -->
 <div class="bg-tinted">
   <div class="section">
