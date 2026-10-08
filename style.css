@@ -4,41 +4,43 @@
    Palette: Soft neutrals + muted mauve
    ═══════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400;1,9..144,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;700&family=Nunito:wght@300;400;500;600;700&family=DM+Mono:wght@300;400&display=swap");
 
-/* ── TOKENS ── */
+/* ── TOKENS: SHARED WEBSITE THEME ── */
 :root {
-:root {
-  --green-deep:   #4b5563;
-  --green-rich:   #6b7280;
-  --green-mid:    #9ca3af;
-  --green-light:  #d1d5db;
-  --green-pale:   #e7dfd7;
-  --green-mist:   #f3f4f6;
+  /* Cream, blush, and mauve palette */
+  --green-deep:  #4a3f46;
+  --green-rich:  #806675;
+  --green-mid:   #b59aa5;
+  --green-light: #e5d5da;
+  --green-pale:  #e5d5da;
+  --green-mist:  #f6eef0;
 
-  --sand:         #fcfbf9;
-  --sand-dark:    #f5f1ec;
+  --sand:        #fcf9f7;
+  --sand-dark:   #f7f0ee;
 
-  --amber:        #7f5a6a;
-  --amber-light:  #b48a5a;
-  --amber-pale:   #eee3e8;
+  --amber:       #a87583;
+  --amber-light: #b59aa5;
+  --amber-pale:  #f2e3e7;
 
-  --text-dark:    #2f3437;
-  --text-mid:     #4b5563;
-  --text-light:   #6b7280;
+  --text-dark:   #342f32;
+  --text-mid:    #554b50;
+  --text-light:  #756970;
 
-  --white:        #ffffff;
-  --focus-ring:   #5b6b8c;
+  --white:       #ffffff;
+  --focus-ring:  #806675;
 
-  --font-display: 'Lora', Georgia, serif;
-  --font-body:    'DM Sans', system-ui, sans-serif;
-  --font-mono:    'DM Mono', 'Courier New', monospace;
+  /* Match homepage typography */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body:    'Nunito', sans-serif;
+  --font-mono:    'DM Mono', monospace;
 
-  --radius-sm:  3px;
-  --radius-md:  6px;
-  --shadow-sm:  0 2px 8px rgba(42,64,48,0.08);
-  --shadow-md:  0 8px 32px rgba(42,64,48,0.12);
-  --shadow-lg:  0 20px 60px rgba(42,64,48,0.15);
+  --radius-sm: 3px;
+  --radius-md: 6px;
+
+  --shadow-sm: 0 2px 8px rgba(74,63,70,0.08);
+  --shadow-md: 0 8px 32px rgba(74,63,70,0.12);
+  --shadow-lg: 0 20px 60px rgba(74,63,70,0.15);
 
   --max-w: 1080px;
   --nav-h: 64px;
