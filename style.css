@@ -6,34 +6,32 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;700&family=Nunito:wght@300;400;500;600;700&family=DM+Mono:wght@300;400&display=swap");
 
-/* ── TOKENS: SHARED WEBSITE THEME ── */
+/* ── TOKENS SHARED WEBSITE COLORS & FONTS ── */
 :root {
-  /* Cream, blush, and mauve palette */
-  --green-deep:  #4a3f46;
-  --green-rich:  #806675;
-  --green-mid:   #b59aa5;
+  --green-deep: #4a3f46;
+  --green-rich: #806675;
+  --green-mid: #b59aa5;
   --green-light: #e5d5da;
-  --green-pale:  #e5d5da;
-  --green-mist:  #f6eef0;
+  --green-pale: #e5d5da;
+  --green-mist: #f6eef0;
 
-  --sand:        #fcf9f7;
-  --sand-dark:   #f7f0ee;
+  --sand: #fcf9f7;
+  --sand-dark: #f7f0ee;
 
-  --amber:       #a87583;
+  --amber: #a87583;
   --amber-light: #b59aa5;
-  --amber-pale:  #f2e3e7;
+  --amber-pale: #f2e3e7;
 
-  --text-dark:   #342f32;
-  --text-mid:    #554b50;
-  --text-light:  #756970;
+  --text-dark: #342f32;
+  --text-mid: #554b50;
+  --text-light: #756970;
 
-  --white:       #ffffff;
-  --focus-ring:  #806675;
+  --white: #ffffff;
+  --focus-ring: #806675;
 
-  /* Match homepage typography */
   --font-display: 'Fraunces', Georgia, serif;
-  --font-body:    'Nunito', sans-serif;
-  --font-mono:    'DM Mono', monospace;
+  --font-body: 'Nunito', sans-serif;
+  --font-mono: 'DM Mono', monospace;
 
   --radius-sm: 3px;
   --radius-md: 6px;
@@ -164,7 +162,7 @@ body::after {
   top: 0;
   z-index: 500;
   height: var(--nav-h);
-  background: rgba(246, 241, 233, 0.92);
+  background: rgba(252, 249, 247, 0.93);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--green-pale);
@@ -376,8 +374,8 @@ h2.section-title {
 
 /* ── FOOTER ── */
 .site-footer {
-background: #4b5563;
-color: var(--green-pale);
+background: #4a3f46;
+   color: var(--green-pale);
   padding: 2.5rem;
   margin-top: auto;
 }
