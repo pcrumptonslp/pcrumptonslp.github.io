@@ -274,6 +274,12 @@ body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--text);l
   border: 1.5px solid var(--cream-dark);
   transition: transform .22s, box-shadow .22s;
 }
+
+  /* Make Teaching & Mentorship full width */
+.hobbies-grid > .hobby-card:last-child {
+  grid-column: 1 / -1;
+}
+  
 .hobby-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 36px rgba(58,92,62,.11);
