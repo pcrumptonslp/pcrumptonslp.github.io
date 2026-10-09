@@ -28,28 +28,23 @@
 .lang-toggle-btn[aria-checked="true"] .lang-toggle-simple{opacity:1;}
 @media(max-width:760px){.lang-toggle-btn{font-size:.58rem;padding:.22rem .5rem;}}
 :root {
-  --moss:#4b5563;
-  --moss-mid:#6b7280;
-  --moss-light:#9ca3af;
-  --moss-pale:#d1d5db;
-  --moss-mist:#f3f4f6;
-
-  --cream:#fcfbf9;
-  --cream-dark:#f5f1ec;
-  --sand:#e7dfd7;
-
-  --terra:#7f5a6a;
-  --terra-pale:#eee3e8;
-
-  --amber:#b48a5a;
-  --amber-pale:#eee3e8;
-
-  --text:#2f3437;
-  --text-mid:#4b5563;
-  --text-soft:#6b7280;
-
+  --moss:#4a3f46;
+  --moss-mid:#806675;
+  --moss-light:#b59aa5;
+  --moss-pale:#e5d5da;
+  --moss-mist:#f6eef0;
+  --cream:#fcf9f7;
+  --cream-dark:#f7f0ee;
+  --sand:#eadde0;
+  --terra:#a87583;
+  --terra-pale:#f2e3e7;
+  --amber:#b58a67;
+  --amber-pale:#f2e3e7;
+  --text:#342f32;
+  --text-mid:#554b50;
+  --text-soft:#756970;
   --white:#ffffff;
-  --focus:#5b6b8c;
+  --focus:#806675;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
@@ -61,7 +56,7 @@ body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--text);l
 :focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:3px;}
 
 /* NAV */
-body>nav{position:sticky;top:0;z-index:200;background:rgba(250,247,242,0.93);backdrop-filter:blur(14px);border-bottom:1.5px solid var(--sand);padding:0 2.5rem;height:62px;display:flex;align-items:center;justify-content:space-between;}
+body>nav{position:sticky;top:0;z-index:200;background:rgba(252,249,247,0.93);backdrop-filter:blur(14px);border-bottom:1.5px solid var(--sand);padding:0 2.5rem;height:62px;display:flex;align-items:center;justify-content:space-between;}
 .nav-brand{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:500;color:var(--moss);text-decoration:none;}
 .nav-list{display:flex;gap:.1rem;list-style:none;}
 .nav-list a{font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.07em;text-transform:uppercase;color:var(--text-mid);text-decoration:none;padding:.4rem .75rem;border-radius:4px;transition:background .18s,color .18s;}
@@ -71,9 +66,9 @@ body>nav{position:sticky;top:0;z-index:200;background:rgba(250,247,242,0.93);bac
 .main-nav-toggle:focus-visible{outline:3px solid var(--focus);outline-offset:2px;}
 
 /* PAGE HEADER */
-.page-head{background:linear-gradient(135deg,var(--moss) 0%,#374151 100%);color:var(--white);padding:3.5rem 2.5rem 3rem;position:relative;overflow:hidden;}
+.page-head{background:linear-gradient(135deg,var(--moss) 0%,var(--moss-mid) 100%);color:var(--white);padding:3.5rem 2.5rem 3rem;position:relative;overflow:hidden;}
 .page-head::before{content:'';position:absolute;top:-50%;right:-5%;width:500px;height:500px;background:radial-gradient(circle,rgba(255,255,255,.07) 0%,transparent 70%);border-radius:50%;}
-.page-head::after{content:'';position:absolute;bottom:-30%;left:-5%;width:350px;height:350px;background:radial-gradient(circle,rgba(200,230,200,.08) 0%,transparent 70%);border-radius:50%;}
+.page-head::after{content:'';position:absolute;bottom:-30%;left:-5%;width:350px;height:350px;background:radial-gradient(circle,rgba(242,227,231,.12) 0%,transparent 70%);border-radius:50%;}
 .page-head-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;}
 .page-head-tag{font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--moss-pale);margin-bottom:.4rem;}
 .page-head-title{font-family:'Fraunces',serif;font-size:clamp(2.2rem,4vw,3.2rem);font-weight:700;line-height:1.1;}
@@ -84,7 +79,7 @@ body>nav{position:sticky;top:0;z-index:200;background:rgba(250,247,242,0.93);bac
 .download-btn svg{width:15px;height:15px;}
 
 /* WAVE */
-.wave{line-height:0;background:linear-gradient(135deg,var(--moss) 0%,#374151 100%);overflow:hidden;}
+.wave{line-height:0;background:linear-gradient(135deg,var(--moss) 0%,var(--moss-mid) 100%);overflow:hidden;}
 .wave-track{display:flex;width:200%;animation:wave-scroll 7s linear infinite;}
 .wave-track svg{width:50%;display:block;flex-shrink:0;}
 @keyframes wave-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -194,6 +189,16 @@ footer{background:var(--moss);color:var(--moss-pale);padding:2.5rem;}
   .cv-entry{grid-template-columns:1fr;}
   .cv-entry-date{text-align:left;}
 }
+
+/* CV PDF PREVIEW */
+.cv-pdf-heading{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:.65rem;}
+.cv-pdf-heading .cv-section-title{font-size:1.5rem;font-weight:700;}
+.cv-pdf-download{display:inline-block;background:var(--terra-pale);color:var(--moss);border:1px solid var(--moss-pale);border-radius:8px;padding:.65rem 1rem;text-decoration:none;font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.02em;}
+.cv-pdf-download:hover{background:var(--moss-pale);}
+.cv-pdf-fallback{color:var(--text-soft);font-size:.85rem;margin-bottom:1rem;}
+.cv-pdf-fallback a{color:var(--moss-mid);text-underline-offset:3px;}
+.cv-pdf-viewer{display:block;width:100%;height:850px;border:1px solid var(--moss-pale);border-radius:8px;background:#fff;}
+@media(max-width:600px){.cv-pdf-viewer{height:600px;}}
 </style>
 </head>
 <body>
@@ -207,7 +212,6 @@ footer{background:var(--moss);color:var(--moss-pale);padding:2.5rem;}
     <li><a href="publications.html">Publications</a></li>
     <li><a href="portfolio.html">Portfolio</a></li>
     <li><a href="cv.html" class="active" aria-current="page">CV</a></li>
-    <li><a href="participant-information.html">Current Work</a></li>
   </ul>
   <button id="lang-toggle" class="lang-toggle-btn" role="switch" aria-checked="false" aria-label="Toggle between simple and detailed language">
     <span class="lang-toggle-label lang-toggle-simple">Simple</span>
@@ -230,8 +234,12 @@ footer{background:var(--moss);color:var(--moss-pale);padding:2.5rem;}
 <main id="main">
   <div class="cv-wrap">
     <section class="cv-section fu">
-      <h2 class="cv-section-title">Curriculum Vitae</h2>
-      <p style="margin-top:1rem; color:var(--text-soft);">Coming soon.</p>
+      <div class="cv-pdf-heading">
+        <h2 class="cv-section-title">Curriculum Vitae</h2>
+        <a class="cv-pdf-download" href="Crumpton_CV_github_OCT2026.pdf" download>Download CV (PDF) ↓</a>
+      </div>
+      <p class="cv-pdf-fallback">If the preview doesn't appear, <a href="Crumpton_CV_github_OCT2026.pdf" target="_blank" rel="noopener">open the CV in a new tab</a>.</p>
+      <iframe class="cv-pdf-viewer" src="Crumpton_CV_github_OCT2026.pdf#view=FitH" title="Phoebe Crumpton Curriculum Vitae PDF" loading="lazy"></iframe>
     </section>
   </div>
 </main>
@@ -246,7 +254,6 @@ footer{background:var(--moss);color:var(--moss-pale);padding:2.5rem;}
       <a href="publications.html">Publications</a>
       <a href="portfolio.html">Portfolio</a>
       <a href="cv.html">CV</a>
-<li><a href="participant-information.html">Current Work</a></li>
     </nav>
 <div class="fc">© 2026 Phoebe Crumpton</div>
   </div>
