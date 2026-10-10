@@ -1016,6 +1016,30 @@ footer{background:var(--moss);color:var(--moss-pale);padding:2.5rem;}
 
   
 
+
+/* Center Teaching & Mentorship without changing the other cards */
+.hobbies-grid > .hobby-card:last-child .hobby-header { justify-content: center; text-align: center; }
+.hobbies-grid > .hobby-card:last-child .hobby-body { max-width: 760px; margin: 0 auto; text-align: center; }
+.hobbies-grid > .hobby-card:last-child .hobby-desc { max-width: none; }
+
+/* Separate, centered contact section */
+.contact-section {
+  border-top: 1px solid var(--sand);
+  background: var(--cream-dark);
+  padding: 4rem 1.5rem 4.5rem;
+  text-align: center;
+}
+.contact-inner { max-width: 720px; margin: 0 auto; }
+.contact-inner .s-title { margin-bottom: 1rem; }
+.contact-email {
+  color: var(--terra);
+  font-family: 'DM Mono', monospace;
+  font-size: .85rem;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.contact-email:hover { color: var(--moss); }
+
 </style>
 
 </head>
@@ -1348,14 +1372,16 @@ footer{background:var(--moss);color:var(--moss-pale);padding:2.5rem;}
 
 </article>
 
+  </div><!-- end professional development grid -->
+</div><!-- end professional development section -->
 
- 
-
-  <section class="section" aria-label="Contact">
+<section class="contact-section" aria-labelledby="contact-heading">
+  <div class="contact-inner">
     <p class="s-tag">Get in Touch</p>
-    <h2 class="s-title">Contact</h2>
-    <a href="mailto:pcrumpton@wisc.edu" style="color:var(--terra);font-family:'DM Mono',monospace;font-size:.85rem;text-underline-offset:4px;">✉ Email Me</a>
-  </section>
+    <h2 class="s-title" id="contact-heading">Contact</h2>
+    <a class="contact-email" href="mailto:pcrumpton@wisc.edu" aria-label="Email Phoebe Crumpton">✉ Email Me</a>
+  </div>
+</section>
 </main>
 
 <footer>
