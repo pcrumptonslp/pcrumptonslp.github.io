@@ -70,34 +70,24 @@
   }
 }
   
-:root {
-  /* Main mauve tones */
-  --moss:#4a3f46;
-  --moss-mid:#806675;
-  --moss-light:#b59aa5;
-  --moss-pale:#e5d5da;
-  --moss-mist:#f6eef0;
-
-  /* Warm backgrounds */
---cream:#fcf9f7;
-  --cream-dark:#f7f0ee;
-  --sand:#eadde0;
-
-  /* Rose accents */
-  --terra:#a87583;
-  --terra-pale:#f2e3e7;
-
-  /* Warm gold accent */
-  --amber:#b58a67;
-
-  /* Text */
-  --text:#342f32;
-  --text-mid:#554b50;
-  --text-soft:#756970;
-  --white:#ffffff;
-
-  /* Accessibility/focus */
-  --focus:#806675;
+ :root {
+  /* Editorial / minimalist palette */
+  --moss:#222326;
+  --moss-mid:#74777B;
+  --moss-light:#9C777C;
+  --moss-pale:#E8E8E6;
+  --moss-mist:#F7F7F5;
+  --cream:#FFFFFF;
+  --cream-dark:#F7F7F5;
+  --sand:#E8E8E6;
+  --terra:#9C777C;
+  --terra-pale:#F5EFF0;
+  --amber:#9C777C;
+  --text:#222326;
+  --text-mid:#55585C;
+  --text-soft:#74777B;
+  --white:#FFFFFF;
+  --focus:#9C777C;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
@@ -128,7 +118,7 @@ body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--text);l
 :focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:3px;}
 
 /* NAV */
-.main-nav{position:sticky;top:0;z-index:200;background:rgba(250,247,242,0.93);backdrop-filter:blur(14px);border-bottom:1.5px solid var(--sand);padding:0 2.5rem;height:62px;display:flex;align-items:center;justify-content:space-between;}
+.main-nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,0.94);backdrop-filter:blur(14px);border-bottom:1.5px solid var(--sand);padding:0 2.5rem;height:62px;display:flex;align-items:center;justify-content:space-between;}
 .nav-brand{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:500;color:var(--moss);text-decoration:none;}
 .nav-list{display:flex;gap:0;list-style:none;align-items:center;}
 .nav-list li{list-style:none;display:flex;align-items:center;}
@@ -144,7 +134,7 @@ body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--text);l
 .photo-col{position:relative;display:flex;justify-content:center;}
 .photo-wrap{position:relative;width:210px;height:255px;animation:photoFloat 5.5s ease-in-out infinite;}
 .photo-ring{position:absolute;inset:0;border-radius:18px;background:var(--terra-pale);border:2.5px solid var(--terra);transform:translate(11px,11px);pointer-events:none;z-index:0;}
-.photo-frame{width:210px;height:255px;border-radius:18px;overflow:hidden;border:3px solid var(--white);position:relative;z-index:1;box-shadow:0 20px 50px rgba(58,92,62,.22);}
+.photo-frame{width:210px;height:255px;border-radius:18px;overflow:hidden;border:3px solid var(--white);position:relative;z-index:1;box-shadow:0 20px 50px rgba(34,35,38,.12);}
 .photo-frame img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;}
 @keyframes photoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);background:var(--terra-pale);padding:.3rem .85rem;border-radius:20px;margin-bottom:1rem;}
@@ -158,7 +148,7 @@ body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--text);l
 .socials{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;margin-bottom:1.25rem;}
 .socials li{list-style:none;}
 .social{font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;color:var(--moss);text-decoration:none;padding:.35rem .8rem;border:1.5px solid var(--moss-pale);border-radius:6px;background:var(--white);transition:all .2s;}
-.social:hover{background:var(--moss-mist);border-color:var(--moss-mid);transform:translateY(-2px);box-shadow:0 4px 12px rgba(58,92,62,.1);}
+.social:hover{background:var(--moss-mist);border-color:var(--moss-mid);transform:translateY(-2px);box-shadow:0 4px 12px rgba(34,35,38,.08);}
 
 /* WAVE */
 .wave{line-height:0;overflow:hidden;}
@@ -185,7 +175,7 @@ body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--text);l
 .press-callout{margin-top:1.5rem;}
 .press-link{display:flex;align-items:center;gap:1rem;background:var(--white);border:1.5px solid var(--moss-pale);border-radius:10px;padding:.75rem 1.2rem .75rem .75rem;text-decoration:none;transition:border-color .2s,box-shadow .2s;}
 .press-img{width:90px;height:68px;object-fit:cover;border-radius:6px;flex-shrink:0;}
-.press-link:hover{border-color:var(--moss-mid);box-shadow:0 4px 16px rgba(58,92,62,.1);}
+.press-link:hover{border-color:var(--moss-mid);box-shadow:0 4px 16px rgba(34,35,38,.08);}
 .press-badge{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);background:var(--terra-pale);padding:.2rem .55rem;border-radius:20px;white-space:nowrap;flex-shrink:0;}
 .press-title{font-size:.92rem;color:var(--moss);font-weight:500;line-height:1.4;}
 .press-source{font-family:'DM Mono',monospace;font-size:.62rem;color:var(--text-soft);letter-spacing:.04em;margin-top:.15rem;}
@@ -282,7 +272,7 @@ body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--text);l
   
 .hobby-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 36px rgba(58,92,62,.11);
+  box-shadow: 0 12px 36px rgba(34,35,38,.08);
 }
 
 /* Header strip with emoji + title */
@@ -441,7 +431,7 @@ body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--text);l
 }
 
 /* VISION */
-.vision{background:linear-gradient(135deg,var(--moss) 0%,#2d4a32 100%);border-radius:20px;padding:3rem 3.5rem;color:var(--white);position:relative;overflow:hidden;}
+.vision{background:linear-gradient(135deg,var(--moss) 0%,#45464a 100%);border-radius:20px;padding:3rem 3.5rem;color:var(--white);position:relative;overflow:hidden;}
 .vision::before{content:'';position:absolute;top:-40%;right:-8%;width:480px;height:480px;background:radial-gradient(circle,rgba(255,255,255,.07) 0%,transparent 70%);border-radius:50%;}
 .vision .s-tag{color:var(--moss-pale);}
 .vision .s-title{color:var(--white);}
@@ -749,7 +739,7 @@ footer{background:var(--moss);color:var(--moss-pale);padding:2.5rem;}
   position: relative;
   background: var(--cream);
   overflow: hidden;
-  padding: 0 0 5rem;
+  padding: 0;
 }
 
 
@@ -759,7 +749,9 @@ footer{background:var(--moss);color:var(--moss-pale);padding:2.5rem;}
   position: relative;
   width: 100%;
   height: 125px;
-  margin-top: 1rem;
+  margin-top: 3rem;
+  border-top: 1px solid var(--sand);
+  border-bottom: 1px solid var(--sand);
 }
 
 .speech-wave svg {
@@ -833,7 +825,8 @@ footer{background:var(--moss);color:var(--moss-pale);padding:2.5rem;}
   grid-template-columns: minmax(280px, 430px) minmax(320px, 1fr);
   align-items: center;
   gap: clamp(3rem, 7vw, 7rem);
-  padding-top: 1.5rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
 }
 
 
@@ -1076,45 +1069,6 @@ footer{background:var(--moss);color:var(--moss-pale);padding:2.5rem;}
 <!-- HERO -->
 <section class="hero-new">
 
-  <!-- ANIMATED SPEECH WAVE -->
-  <div class="speech-wave" aria-hidden="true">
-    <svg viewBox="0 0 1600 120" preserveAspectRatio="none">
-      <path class="speech-wave-line"
-        d="M0,72
-           C55,72 75,72 100,72
-           C120,72 126,28 148,28
-           C170,28 176,94 200,94
-           C224,94 232,50 254,50
-           C282,50 286,72 330,72
-           C390,72 420,48 470,48
-           C520,48 550,78 600,78
-           C650,78 670,38 710,38
-           C750,38 765,72 815,72
-           C865,72 890,56 930,56
-           C980,56 1000,76 1050,76
-           C1100,76 1125,60 1170,60
-           C1210,60 1220,96 1245,96
-           C1270,96 1278,48 1300,48
-           C1325,48 1330,98 1355,98
-           C1380,98 1388,25 1412,25
-           C1438,25 1445,75 1480,75
-           C1520,75 1550,72 1600,72"/>
-    </svg>
-
-    <div class="wave-label wave-label-one">
-      Speech-Language Pathologist
-    </div>
-
-    <div class="wave-label wave-label-two">
-      PhD Student
-    </div>
-
-    <div class="wave-label wave-label-three">
-      Researcher
-    </div>
-  </div>
-
-
   <!-- HERO CONTENT -->
   <div class="hero-new-inner">
 
@@ -1157,6 +1111,46 @@ footer{background:var(--moss);color:var(--moss-pale);padding:2.5rem;}
     </div>
 
   </div>
+
+  <!-- ANIMATED SPEECH WAVE -->
+  <div class="speech-wave" aria-hidden="true">
+    <svg viewBox="0 0 1600 120" preserveAspectRatio="none">
+      <path class="speech-wave-line"
+        d="M0,72
+           C55,72 75,72 100,72
+           C120,72 126,28 148,28
+           C170,28 176,94 200,94
+           C224,94 232,50 254,50
+           C282,50 286,72 330,72
+           C390,72 420,48 470,48
+           C520,48 550,78 600,78
+           C650,78 670,38 710,38
+           C750,38 765,72 815,72
+           C865,72 890,56 930,56
+           C980,56 1000,76 1050,76
+           C1100,76 1125,60 1170,60
+           C1210,60 1220,96 1245,96
+           C1270,96 1278,48 1300,48
+           C1325,48 1330,98 1355,98
+           C1380,98 1388,25 1412,25
+           C1438,25 1445,75 1480,75
+           C1520,75 1550,72 1600,72"/>
+    </svg>
+
+    <div class="wave-label wave-label-one">
+      Speech-Language Pathologist
+    </div>
+
+    <div class="wave-label wave-label-two">
+      PhD Student
+    </div>
+
+    <div class="wave-label wave-label-three">
+      Researcher
+    </div>
+  </div>
+
+
 
 </section>
 
